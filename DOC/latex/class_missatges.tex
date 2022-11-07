@@ -1,0 +1,235 @@
+\hypertarget{class_missatges}{}\doxysection{Referencia de la Clase Missatges}
+\label{class_missatges}\index{Missatges@{Missatges}}
+
+
+Es el conjunto de mensajes y contiene los alfabetos con su id y su información.  
+
+
+
+
+{\ttfamily \#include $<$Missatges.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_missatges_a90900698bcfc3493073b6ce992adf4e9}{Missatges}} ()
+\begin{DoxyCompactList}\small\item\em Función creadora de \mbox{\hyperlink{class_missatges}{Missatges}} por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_missatges_a029ff77ff8e6e573aa8e1187a817424d}{read\+\_\+missatges}} ()
+\begin{DoxyCompactList}\small\item\em Funciona para leer los elementos de Alfabetos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_missatges_a1cb6dc974816b3a77656921f16aea6e2}{print\+\_\+missatges}} ()
+\begin{DoxyCompactList}\small\item\em Imprime \mbox{\hyperlink{class_missatges}{Missatges}} por orden alfabético de la id. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_missatges_aada8db97054291c1eefb169c2d9a4ff6}{is\+\_\+msg\+\_\+there}} (const string idm)
+\begin{DoxyCompactList}\small\item\em Comprueba que el alfabeto por el identificador ida está en \mbox{\hyperlink{class_missatges}{Missatges}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_missatges_afa398edd414f947c17bb8f04f8ae6418}{add\+\_\+msg}} (const string idm)
+\begin{DoxyCompactList}\small\item\em Añade el alfabeto identificado por idm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_missatges_acb744dbfcb5a19975757061102062788}{del\+\_\+msg}} (const string idm)
+\begin{DoxyCompactList}\small\item\em Borra el alfabeto identificado por idm. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_missatges_a82c4ac7683df7f5384f2d4b457210c3b}{get\+\_\+msg}} (const string idm)
+\begin{DoxyCompactList}\small\item\em Obtiene el objeto mensaje con idm. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_missatges_aab5b28466d0cb7c449a03b4e5f353c94}{get\+\_\+alf}} (const string idm)
+\begin{DoxyCompactList}\small\item\em Obtiene el objeto alfabeto asociado con el mensaje idm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_missatges_a320ac868fb92eb5d21abcf794087e575}{n\+\_\+msg}} ()
+\begin{DoxyCompactList}\small\item\em Retorna el número de mensajes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Es el conjunto de mensajes y contiene los alfabetos con su id y su información. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_missatges_8hh_source_l00024}{24}} del archivo \mbox{\hyperlink{_missatges_8hh_source}{Missatges.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_missatges_a90900698bcfc3493073b6ce992adf4e9}\label{class_missatges_a90900698bcfc3493073b6ce992adf4e9}} 
+\index{Missatges@{Missatges}!Missatges@{Missatges}}
+\index{Missatges@{Missatges}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{Missatges()}{Missatges()}}
+{\footnotesize\ttfamily Missatges\+::\+Missatges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función creadora de \mbox{\hyperlink{class_missatges}{Missatges}} por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+$<$me$>$cierto$<$me$>$ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Crea missatges vacío 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_missatges_a029ff77ff8e6e573aa8e1187a817424d}\label{class_missatges_a029ff77ff8e6e573aa8e1187a817424d}} 
+\index{Missatges@{Missatges}!read\_missatges@{read\_missatges}}
+\index{read\_missatges@{read\_missatges}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{read\_missatges()}{read\_missatges()}}
+{\footnotesize\ttfamily void Missatges\+::read\+\_\+missatges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funciona para leer los elementos de Alfabetos. 
+
+\begin{DoxyPrecond}{Precondición}
+Mensaje es una sola línea no vacía 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+\mbox{\hyperlink{class_missatges}{Missatges}} con todos sus ids y datos 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_missatges_a1cb6dc974816b3a77656921f16aea6e2}\label{class_missatges_a1cb6dc974816b3a77656921f16aea6e2}} 
+\index{Missatges@{Missatges}!print\_missatges@{print\_missatges}}
+\index{print\_missatges@{print\_missatges}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{print\_missatges()}{print\_missatges()}}
+{\footnotesize\ttfamily void Missatges\+::print\+\_\+missatges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime \mbox{\hyperlink{class_missatges}{Missatges}} por orden alfabético de la id. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto{\itshape  }}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\itshape {\itshape  Se imprimen los datos en pantalla }}
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_missatges_aada8db97054291c1eefb169c2d9a4ff6}\label{class_missatges_aada8db97054291c1eefb169c2d9a4ff6}} 
+\index{Missatges@{Missatges}!is\_msg\_there@{is\_msg\_there}}
+\index{is\_msg\_there@{is\_msg\_there}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{is\_msg\_there()}{is\_msg\_there()}}
+{\footnotesize\ttfamily bool Missatges\+::is\+\_\+msg\+\_\+there (\begin{DoxyParamCaption}\item[{const string}]{idm }\end{DoxyParamCaption})}
+
+
+
+Comprueba que el alfabeto por el identificador ida está en \mbox{\hyperlink{class_missatges}{Missatges}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert{\itshape  }}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\itshape {\itshape  Retorna si ida está en \mbox{\hyperlink{class_missatges}{Missatges}} o no }}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em idm} & {\itshape {\itshape }}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\itshape {\itshape  true }}
+
+{\itshape {\itshape  false }}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_missatges_afa398edd414f947c17bb8f04f8ae6418}\label{class_missatges_afa398edd414f947c17bb8f04f8ae6418}} 
+\index{Missatges@{Missatges}!add\_msg@{add\_msg}}
+\index{add\_msg@{add\_msg}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{add\_msg()}{add\_msg()}}
+{\footnotesize\ttfamily void Missatges\+::add\+\_\+msg (\begin{DoxyParamCaption}\item[{const string}]{idm }\end{DoxyParamCaption})}
+
+
+
+Añade el alfabeto identificado por idm. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto{\itshape  }}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\itshape {\itshape  Se ha añadido idm a \mbox{\hyperlink{class_missatges}{Missatges}} }}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em idm} & {\itshape {\itshape  }}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_missatges_acb744dbfcb5a19975757061102062788}\label{class_missatges_acb744dbfcb5a19975757061102062788}} 
+\index{Missatges@{Missatges}!del\_msg@{del\_msg}}
+\index{del\_msg@{del\_msg}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{del\_msg()}{del\_msg()}}
+{\footnotesize\ttfamily void Missatges\+::del\+\_\+msg (\begin{DoxyParamCaption}\item[{const string}]{idm }\end{DoxyParamCaption})}
+
+
+
+Borra el alfabeto identificado por idm. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto{\itshape  }}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\itshape {\itshape  Se ha borrado idm de \mbox{\hyperlink{class_missatges}{Missatges}} }}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em idm} & {\itshape {\itshape  }}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_missatges_a82c4ac7683df7f5384f2d4b457210c3b}\label{class_missatges_a82c4ac7683df7f5384f2d4b457210c3b}} 
+\index{Missatges@{Missatges}!get\_msg@{get\_msg}}
+\index{get\_msg@{get\_msg}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{get\_msg()}{get\_msg()}}
+{\footnotesize\ttfamily string Missatges\+::get\+\_\+msg (\begin{DoxyParamCaption}\item[{const string}]{idm }\end{DoxyParamCaption})}
+
+
+
+Obtiene el objeto mensaje con idm. 
+
+\begin{DoxyPrecond}{Precondición}
+Idm está en \mbox{\hyperlink{class_missatges}{Missatges}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna ese mensaje por idm 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em idm} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_missatges_aab5b28466d0cb7c449a03b4e5f353c94}\label{class_missatges_aab5b28466d0cb7c449a03b4e5f353c94}} 
+\index{Missatges@{Missatges}!get\_alf@{get\_alf}}
+\index{get\_alf@{get\_alf}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{get\_alf()}{get\_alf()}}
+{\footnotesize\ttfamily string Missatges\+::get\+\_\+alf (\begin{DoxyParamCaption}\item[{const string}]{idm }\end{DoxyParamCaption})}
+
+
+
+Obtiene el objeto alfabeto asociado con el mensaje idm. 
+
+\begin{DoxyPrecond}{Precondición}
+Idm está en \mbox{\hyperlink{class_missatges}{Missatges}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El alfabeto por ida por mensaje idm 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em idm} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_missatges_a320ac868fb92eb5d21abcf794087e575}\label{class_missatges_a320ac868fb92eb5d21abcf794087e575}} 
+\index{Missatges@{Missatges}!n\_msg@{n\_msg}}
+\index{n\_msg@{n\_msg}!Missatges@{Missatges}}
+\doxysubsubsection{\texorpdfstring{n\_msg()}{n\_msg()}}
+{\footnotesize\ttfamily int Missatges\+::n\+\_\+msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna el número de mensajes. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto{\itshape  }}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\itshape {\itshape  Número de mensajes en \mbox{\hyperlink{class_missatges}{Missatges}} }}
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+{\itshape {\itshape  int }}
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_missatges_8hh}{Missatges.\+hh}}\end{DoxyCompactItemize}

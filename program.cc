@@ -1,9 +1,29 @@
+/**
+ * @mainpage Encriptación de mensajes.
+ * Programa modular para la encriptación de mensajes mediante metodos de substitución o permutación 
+ * usando las clases <em>Alfabets<em>, <em>Encriptacions<em>, y <em>Missatges<em>
+*/
+
+/**
+ * @file program.cc
+ * @author Pol Casanovas Puig (pol.casanovas.puig@estudiantat.upc.edu)
+ * @brief La parte principal de programa con la gestión de la input de los comandos
+ * @version 0.1 
+ * @date 07-11-22
+ * 
+ */
+
 #include "Alfabets.hh"
 #include "Encriptacions.hh" //redundant es fa servir dins de les classes
 #include "Missatges.hh"
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief Parte principal de programa
+ * 
+ * @return main, no tiene return
+ */
 int main() {
 
   Alfabets alf;

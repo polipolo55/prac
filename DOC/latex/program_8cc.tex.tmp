@@ -1,0 +1,155 @@
+\hypertarget{program_8cc}{}\doxysection{Referencia del Archivo program.\+cc}
+\label{program_8cc}\index{program.cc@{program.cc}}
+
+
+La parte principal de programa con la gestión de la input de los comandos.  
+
+
+Dependencia gráfica adjunta para program.\+cc\+:
+% FIG 0
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Parte principal de programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+La parte principal de programa con la gestión de la input de los comandos. 
+
+\begin{DoxyAuthor}{Autor}
+Pol Casanovas Puig (\href{mailto:pol.casanovas.puig@estudiantat.upc.edu}{\texttt{ pol.\+casanovas.\+puig@estudiantat.\+upc.\+edu}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+07-\/11-\/22 
+\end{DoxyDate}
+
+
+Definición en el archivo \mbox{\hyperlink{program_8cc_source}{program.\+cc}}.
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.cc@{program.cc}!main@{main}}
+\index{main@{main}!program.cc@{program.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Parte principal de programa. 
+
+\begin{DoxyReturn}{Devuelve}
+main, no tiene return 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{program_8cc_source_l00027}{27}} del archivo \mbox{\hyperlink{program_8cc_source}{program.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027            \{}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029   \mbox{\hyperlink{class_alfabets}{Alfabets}} alf;}
+\DoxyCodeLine{00030   alf.\mbox{\hyperlink{class_alfabets_a954309d489a7848e122e031a94ab7676}{read\_alfabets}}();}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032   \mbox{\hyperlink{class_missatges}{Missatges}} msg;}
+\DoxyCodeLine{00033   msg.\mbox{\hyperlink{class_missatges_a029ff77ff8e6e573aa8e1187a817424d}{read\_missatges}}();}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035   \mbox{\hyperlink{class_encriptacions}{Encriptacions}} enc;}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037   \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039   cin >> s;}
+\DoxyCodeLine{00040   \textcolor{keywordflow}{while} (s != \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{00041     \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}nuevo\_mensaje"{}} or s == \textcolor{stringliteral}{"{}nm"{}}) \{}
+\DoxyCodeLine{00042       \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{00043       cin >> ida;}
+\DoxyCodeLine{00044       \textcolor{keywordflow}{if} (alf.\mbox{\hyperlink{class_alfabets_aea12b508e72204de947f2c69c5d34966}{is\_alf\_there}}(ida)) \{}
+\DoxyCodeLine{00045         \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{00046         cin >> idm;}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{if}(!msg.\mbox{\hyperlink{class_missatges_aada8db97054291c1eefb169c2d9a4ff6}{is\_msg\_there}}(idm))\{}
+\DoxyCodeLine{00048           msg.\mbox{\hyperlink{class_missatges_afa398edd414f947c17bb8f04f8ae6418}{add\_msg}}(idm);}
+\DoxyCodeLine{00049           cout << msg.\mbox{\hyperlink{class_missatges_a320ac868fb92eb5d21abcf794087e575}{n\_msg}}() << endl;}
+\DoxyCodeLine{00050         \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}ja existeix el missatge"{}} << idm << endl;}
+\DoxyCodeLine{00051       \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}no existeix l'alfabet: "{}} << ida << endl;}
+\DoxyCodeLine{00052     }
+\DoxyCodeLine{00053     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}nuevo\_alfabeto"{}} or s == \textcolor{stringliteral}{"{}na"{}}) \{}
+\DoxyCodeLine{00054       \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{00055       cin >> ida;}
+\DoxyCodeLine{00056       \textcolor{keywordflow}{if} (!alf.\mbox{\hyperlink{class_alfabets_aea12b508e72204de947f2c69c5d34966}{is\_alf\_there}}(ida)) \{}
+\DoxyCodeLine{00057         alf.\mbox{\hyperlink{class_alfabets_a1df46a0f6d6a41ea7a2bf07f38fe80f2}{add\_alf}}(ida);}
+\DoxyCodeLine{00058         cout << alf.\mbox{\hyperlink{class_alfabets_abdc00e61db168210327a92655952d024}{n\_alf}}() << endl;}
+\DoxyCodeLine{00059       \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}ja existeix l'alfabet: "{}} << ida << endl;}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}borra\_mensaje"{}} or s == \textcolor{stringliteral}{"{}bm"{}}) \{}
+\DoxyCodeLine{00062       \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{00063       cin >> idm;}
+\DoxyCodeLine{00064       \textcolor{keywordflow}{if} (msg.\mbox{\hyperlink{class_missatges_aada8db97054291c1eefb169c2d9a4ff6}{is\_msg\_there}}(idm)) \{}
+\DoxyCodeLine{00065         msg.\mbox{\hyperlink{class_missatges_acb744dbfcb5a19975757061102062788}{del\_msg}}(idm);}
+\DoxyCodeLine{00066         cout << msg.\mbox{\hyperlink{class_missatges_a320ac868fb92eb5d21abcf794087e575}{n\_msg}}() << endl;}
+\DoxyCodeLine{00067       \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}el missatge "{}} << idm << \textcolor{stringliteral}{"{} no existeix"{}} << endl;}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}borra\_alfabeto"{}} or s == \textcolor{stringliteral}{"{}ba"{}}) \{}
+\DoxyCodeLine{00070       \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{00071       cin >> ida;}
+\DoxyCodeLine{00072       \textcolor{keywordflow}{if} (alf.\mbox{\hyperlink{class_alfabets_aea12b508e72204de947f2c69c5d34966}{is\_alf\_there}}(ida)) \{}
+\DoxyCodeLine{00073         \textcolor{keywordflow}{if} (1 > alf.\mbox{\hyperlink{class_alfabets_ab6f64cefbafa7aaf9deef36aab6a9cd2}{n\_of\_msg}}(ida))\{}
+\DoxyCodeLine{00074           alf.\mbox{\hyperlink{class_alfabets_a2906b43a1665ccd0af408d943f46c523}{del\_alf}}(ida);}
+\DoxyCodeLine{00075         \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}l'alfabet "{}} << ida << \textcolor{stringliteral}{"{} conté missatges"{}} << endl; }
+\DoxyCodeLine{00076       \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}no existeix l'alfabet "{}} << ida << endl; }
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}listar\_mensajes"{}} or s == \textcolor{stringliteral}{"{}lm"{}}) \{}
+\DoxyCodeLine{00079       msg.\mbox{\hyperlink{class_missatges_a1cb6dc974816b3a77656921f16aea6e2}{print\_missatges}}();}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}listar\_alfabetos"{}} or s == \textcolor{stringliteral}{"{}la"{}}) \{}
+\DoxyCodeLine{00082       alf.\mbox{\hyperlink{class_alfabets_a42e1b50766116ae09bdb5a6190467ccb}{print\_alfabets}}();}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}codificar\_sustitucion\_guardado"{}} or s == \textcolor{stringliteral}{"{}csg"{}}) \{}
+\DoxyCodeLine{00085       \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{00086       cin >> idm;}
+\DoxyCodeLine{00087       \textcolor{keywordflow}{if} (msg.\mbox{\hyperlink{class_missatges_aada8db97054291c1eefb169c2d9a4ff6}{is\_msg\_there}}(idm)) \{}
+\DoxyCodeLine{00088         \textcolor{keywordtype}{string} cl;}
+\DoxyCodeLine{00089         cin >> cl;}
+\DoxyCodeLine{00090         enc.\mbox{\hyperlink{class_encriptacions_afa690586659a43ca553ad14f4e0fb75c}{encrip\_sust}}(msg.\mbox{\hyperlink{class_missatges_aab5b28466d0cb7c449a03b4e5f353c94}{get\_alf}}(idm), msg.\mbox{\hyperlink{class_missatges_a82c4ac7683df7f5384f2d4b457210c3b}{get\_msg}}(idm), cl);}
+\DoxyCodeLine{00091       \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}el missatge "{}} << idm << \textcolor{stringliteral}{"{} no existeix"{}} << endl;}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}codificar\_sustitucion"{}} or s == \textcolor{stringliteral}{"{}cs"{}}) \{}
+\DoxyCodeLine{00094       \textcolor{keywordtype}{string} ida, cl, msg;}
+\DoxyCodeLine{00095       cin >> ida;}
+\DoxyCodeLine{00096       \textcolor{keywordflow}{if} (alf.\mbox{\hyperlink{class_alfabets_aea12b508e72204de947f2c69c5d34966}{is\_alf\_there}}(ida))\{}
+\DoxyCodeLine{00097         cin >> cl >> msg;}
+\DoxyCodeLine{00098         enc.\mbox{\hyperlink{class_encriptacions_afa690586659a43ca553ad14f4e0fb75c}{encrip\_sust}}(ida, msg, cl);}
+\DoxyCodeLine{00099       \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}l'alfabet "{}} << ida << \textcolor{stringliteral}{"{} no existeix"{}} << endl; }
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}decodificar\_sustitución"{}} or s == \textcolor{stringliteral}{"{}ds"{}}) \{}
+\DoxyCodeLine{00102         \textcolor{comment}{//mirar com fer es pot fer al reves depenent del algoritme}}
+\DoxyCodeLine{00103     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}codificar\_permutacion\_guardado"{}} or s == \textcolor{stringliteral}{"{}cpg"{}}) \{}
+\DoxyCodeLine{00104       \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{00105       cin >> idm;}
+\DoxyCodeLine{00106       \textcolor{keywordflow}{if} (msg.is\_msg\_there(idm)) \{}
+\DoxyCodeLine{00107         \textcolor{keywordtype}{int} b;}
+\DoxyCodeLine{00108         cin >> b;}
+\DoxyCodeLine{00109         enc.\mbox{\hyperlink{class_encriptacions_ab15086109fc056fd4157bdd92c096ed4}{encrip\_perm}}(msg.get\_alf(idm), msg.get\_msg(idm), b);}
+\DoxyCodeLine{00110       \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}el missatge "{}} << idm << \textcolor{stringliteral}{"{} no existeix"{}} << endl;}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}codificar\_permutacion"{}} or s == \textcolor{stringliteral}{"{}cp"{}}) \{}
+\DoxyCodeLine{00113       \textcolor{keywordtype}{string} ida, msg;}
+\DoxyCodeLine{00114       \textcolor{keywordtype}{int} b;}
+\DoxyCodeLine{00115       cin >> ida;}
+\DoxyCodeLine{00116       \textcolor{keywordflow}{if} (alf.\mbox{\hyperlink{class_alfabets_aea12b508e72204de947f2c69c5d34966}{is\_alf\_there}}(ida))\{}
+\DoxyCodeLine{00117         cin >> b >> msg;}
+\DoxyCodeLine{00118         enc.\mbox{\hyperlink{class_encriptacions_ab15086109fc056fd4157bdd92c096ed4}{encrip\_perm}}(ida, msg, b);}
+\DoxyCodeLine{00119       \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}l'alfabet "{}} << ida << \textcolor{stringliteral}{"{} no existeix"{}} << endl; }
+\DoxyCodeLine{00120  }
+\DoxyCodeLine{00121     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"{}decodificar\_permutacion"{}} or s == \textcolor{stringliteral}{"{}dp"{}}) \{}
+\DoxyCodeLine{00122       \textcolor{comment}{//mirar com fer-\/ho un cop pensat l'algoritme }}
+\DoxyCodeLine{00123     \}}
+\DoxyCodeLine{00124   \}}
+\DoxyCodeLine{00125 \}}
+
+\end{DoxyCode}

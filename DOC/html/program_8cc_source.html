@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PRO2: Fichero Fuente program.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PRO2<span id="projectnumber">&#160;especificación</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">program.cc</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="program_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_alfabets_8hh.html">Alfabets.hh</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_encriptacions_8hh.html">Encriptacions.hh</a>&quot;</span> <span class="comment">//redundant es fa servir dins de les classes</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_missatges_8hh.html">Missatges.hh</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   27</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_class" href="class_alfabets.html">Alfabets</a> alf;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  alf.<a class="code hl_function" href="class_alfabets.html#a954309d489a7848e122e031a94ab7676">read_alfabets</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_class" href="class_missatges.html">Missatges</a> msg;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  msg.<a class="code hl_function" href="class_missatges.html#a029ff77ff8e6e573aa8e1187a817424d">read_missatges</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_class" href="class_encriptacions.html">Encriptacions</a> enc;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">string</span> s;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  cin &gt;&gt; s;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordflow">while</span> (s != <span class="stringliteral">&quot;fin&quot;</span>) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;nuevo_mensaje&quot;</span> or s == <span class="stringliteral">&quot;nm&quot;</span>) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keywordtype">string</span> ida;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      cin &gt;&gt; ida;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keywordflow">if</span> (alf.<a class="code hl_function" href="class_alfabets.html#aea12b508e72204de947f2c69c5d34966">is_alf_there</a>(ida)) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">string</span> idm;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        cin &gt;&gt; idm;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span>(!msg.<a class="code hl_function" href="class_missatges.html#aada8db97054291c1eefb169c2d9a4ff6">is_msg_there</a>(idm)){</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>          msg.<a class="code hl_function" href="class_missatges.html#afa398edd414f947c17bb8f04f8ae6418">add_msg</a>(idm);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>          cout &lt;&lt; msg.<a class="code hl_function" href="class_missatges.html#a320ac868fb92eb5d21abcf794087e575">n_msg</a>() &lt;&lt; endl;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;ja existeix el missatge&quot;</span> &lt;&lt; idm &lt;&lt; endl;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;no existeix l&#39;alfabet: &quot;</span> &lt;&lt; ida &lt;&lt; endl;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;nuevo_alfabeto&quot;</span> or s == <span class="stringliteral">&quot;na&quot;</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keywordtype">string</span> ida;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      cin &gt;&gt; ida;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keywordflow">if</span> (!alf.<a class="code hl_function" href="class_alfabets.html#aea12b508e72204de947f2c69c5d34966">is_alf_there</a>(ida)) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        alf.<a class="code hl_function" href="class_alfabets.html#a1df46a0f6d6a41ea7a2bf07f38fe80f2">add_alf</a>(ida);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        cout &lt;&lt; alf.<a class="code hl_function" href="class_alfabets.html#abdc00e61db168210327a92655952d024">n_alf</a>() &lt;&lt; endl;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;ja existeix l&#39;alfabet: &quot;</span> &lt;&lt; ida &lt;&lt; endl;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;borra_mensaje&quot;</span> or s == <span class="stringliteral">&quot;bm&quot;</span>) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordtype">string</span> idm;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      cin &gt;&gt; idm;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">if</span> (msg.<a class="code hl_function" href="class_missatges.html#aada8db97054291c1eefb169c2d9a4ff6">is_msg_there</a>(idm)) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        msg.<a class="code hl_function" href="class_missatges.html#acb744dbfcb5a19975757061102062788">del_msg</a>(idm);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        cout &lt;&lt; msg.<a class="code hl_function" href="class_missatges.html#a320ac868fb92eb5d21abcf794087e575">n_msg</a>() &lt;&lt; endl;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;el missatge &quot;</span> &lt;&lt; idm &lt;&lt; <span class="stringliteral">&quot; no existeix&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;borra_alfabeto&quot;</span> or s == <span class="stringliteral">&quot;ba&quot;</span>) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keywordtype">string</span> ida;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      cin &gt;&gt; ida;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordflow">if</span> (alf.<a class="code hl_function" href="class_alfabets.html#aea12b508e72204de947f2c69c5d34966">is_alf_there</a>(ida)) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (1 &gt; alf.<a class="code hl_function" href="class_alfabets.html#ab6f64cefbafa7aaf9deef36aab6a9cd2">n_of_msg</a>(ida)){</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>          alf.<a class="code hl_function" href="class_alfabets.html#a2906b43a1665ccd0af408d943f46c523">del_alf</a>(ida);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;l&#39;alfabet &quot;</span> &lt;&lt; ida &lt;&lt; <span class="stringliteral">&quot; conté missatges&quot;</span> &lt;&lt; endl; </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;no existeix l&#39;alfabet &quot;</span> &lt;&lt; ida &lt;&lt; endl; </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;listar_mensajes&quot;</span> or s == <span class="stringliteral">&quot;lm&quot;</span>) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      msg.<a class="code hl_function" href="class_missatges.html#a1cb6dc974816b3a77656921f16aea6e2">print_missatges</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;listar_alfabetos&quot;</span> or s == <span class="stringliteral">&quot;la&quot;</span>) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      alf.<a class="code hl_function" href="class_alfabets.html#a42e1b50766116ae09bdb5a6190467ccb">print_alfabets</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;codificar_sustitucion_guardado&quot;</span> or s == <span class="stringliteral">&quot;csg&quot;</span>) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keywordtype">string</span> idm;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      cin &gt;&gt; idm;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordflow">if</span> (msg.<a class="code hl_function" href="class_missatges.html#aada8db97054291c1eefb169c2d9a4ff6">is_msg_there</a>(idm)) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordtype">string</span> cl;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        cin &gt;&gt; cl;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        enc.<a class="code hl_function" href="class_encriptacions.html#afa690586659a43ca553ad14f4e0fb75c">encrip_sust</a>(msg.<a class="code hl_function" href="class_missatges.html#aab5b28466d0cb7c449a03b4e5f353c94">get_alf</a>(idm), msg.<a class="code hl_function" href="class_missatges.html#a82c4ac7683df7f5384f2d4b457210c3b">get_msg</a>(idm), cl);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;el missatge &quot;</span> &lt;&lt; idm &lt;&lt; <span class="stringliteral">&quot; no existeix&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;codificar_sustitucion&quot;</span> or s == <span class="stringliteral">&quot;cs&quot;</span>) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="keywordtype">string</span> ida, cl, msg;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      cin &gt;&gt; ida;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keywordflow">if</span> (alf.<a class="code hl_function" href="class_alfabets.html#aea12b508e72204de947f2c69c5d34966">is_alf_there</a>(ida)){</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        cin &gt;&gt; cl &gt;&gt; msg;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        enc.<a class="code hl_function" href="class_encriptacions.html#afa690586659a43ca553ad14f4e0fb75c">encrip_sust</a>(ida, msg, cl);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;l&#39;alfabet &quot;</span> &lt;&lt; ida &lt;&lt; <span class="stringliteral">&quot; no existeix&quot;</span> &lt;&lt; endl; </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;decodificar_sustitución&quot;</span> or s == <span class="stringliteral">&quot;ds&quot;</span>) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="comment">//mirar com fer es pot fer al reves depenent del algoritme</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;codificar_permutacion_guardado&quot;</span> or s == <span class="stringliteral">&quot;cpg&quot;</span>) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <span class="keywordtype">string</span> idm;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      cin &gt;&gt; idm;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="keywordflow">if</span> (msg.<a class="code hl_function" href="class_missatges.html#aada8db97054291c1eefb169c2d9a4ff6">is_msg_there</a>(idm)) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        cin &gt;&gt; b;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        enc.<a class="code hl_function" href="class_encriptacions.html#ab15086109fc056fd4157bdd92c096ed4">encrip_perm</a>(msg.<a class="code hl_function" href="class_missatges.html#aab5b28466d0cb7c449a03b4e5f353c94">get_alf</a>(idm), msg.<a class="code hl_function" href="class_missatges.html#a82c4ac7683df7f5384f2d4b457210c3b">get_msg</a>(idm), b);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;el missatge &quot;</span> &lt;&lt; idm &lt;&lt; <span class="stringliteral">&quot; no existeix&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;codificar_permutacion&quot;</span> or s == <span class="stringliteral">&quot;cp&quot;</span>) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordtype">string</span> ida, msg;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      cin &gt;&gt; ida;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <span class="keywordflow">if</span> (alf.<a class="code hl_function" href="class_alfabets.html#aea12b508e72204de947f2c69c5d34966">is_alf_there</a>(ida)){</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        cin &gt;&gt; b &gt;&gt; msg;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        enc.<a class="code hl_function" href="class_encriptacions.html#ab15086109fc056fd4157bdd92c096ed4">encrip_perm</a>(ida, msg, b);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;l&#39;alfabet &quot;</span> &lt;&lt; ida &lt;&lt; <span class="stringliteral">&quot; no existeix&quot;</span> &lt;&lt; endl; </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;decodificar_permutacion&quot;</span> or s == <span class="stringliteral">&quot;dp&quot;</span>) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="comment">//mirar com fer-ho un cop pensat l&#39;algoritme </span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
+<div class="ttc" id="a_alfabets_8hh_html"><div class="ttname"><a href="_alfabets_8hh.html">Alfabets.hh</a></div><div class="ttdoc">Especificacion de los Alfabetos.</div></div>
+<div class="ttc" id="a_encriptacions_8hh_html"><div class="ttname"><a href="_encriptacions_8hh.html">Encriptacions.hh</a></div><div class="ttdoc">Especificacion de los metodos de encriptacion.</div></div>
+<div class="ttc" id="a_missatges_8hh_html"><div class="ttname"><a href="_missatges_8hh.html">Missatges.hh</a></div><div class="ttdoc">Especificacion del conjunto de Mensajes.</div></div>
+<div class="ttc" id="aclass_alfabets_html"><div class="ttname"><a href="class_alfabets.html">Alfabets</a></div><div class="ttdoc">Es el conjunto de alfabetos y contiene los alfabetos con su id y su información.</div><div class="ttdef"><b>Definition:</b> <a href="_alfabets_8hh_source.html#l00024">Alfabets.hh:25</a></div></div>
+<div class="ttc" id="aclass_alfabets_html_a1df46a0f6d6a41ea7a2bf07f38fe80f2"><div class="ttname"><a href="class_alfabets.html#a1df46a0f6d6a41ea7a2bf07f38fe80f2">Alfabets::add_alf</a></div><div class="ttdeci">void add_alf(const string ida)</div><div class="ttdoc">Añade el alfabeto identificado por ida.</div></div>
+<div class="ttc" id="aclass_alfabets_html_a2906b43a1665ccd0af408d943f46c523"><div class="ttname"><a href="class_alfabets.html#a2906b43a1665ccd0af408d943f46c523">Alfabets::del_alf</a></div><div class="ttdeci">void del_alf(const string ida)</div><div class="ttdoc">Elimina el mensaje alfabeto identificado por ida.</div></div>
+<div class="ttc" id="aclass_alfabets_html_a42e1b50766116ae09bdb5a6190467ccb"><div class="ttname"><a href="class_alfabets.html#a42e1b50766116ae09bdb5a6190467ccb">Alfabets::print_alfabets</a></div><div class="ttdeci">void print_alfabets()</div><div class="ttdoc">Imprime Alfabetos por orden alfabético.</div></div>
+<div class="ttc" id="aclass_alfabets_html_a954309d489a7848e122e031a94ab7676"><div class="ttname"><a href="class_alfabets.html#a954309d489a7848e122e031a94ab7676">Alfabets::read_alfabets</a></div><div class="ttdeci">void read_alfabets()</div><div class="ttdoc">Funciona para leer los elementos de Alfabetos.</div></div>
+<div class="ttc" id="aclass_alfabets_html_ab6f64cefbafa7aaf9deef36aab6a9cd2"><div class="ttname"><a href="class_alfabets.html#ab6f64cefbafa7aaf9deef36aab6a9cd2">Alfabets::n_of_msg</a></div><div class="ttdeci">int n_of_msg(const string ida)</div><div class="ttdoc">Consulta el némero de Mensajes en un Alfabeto ida.</div></div>
+<div class="ttc" id="aclass_alfabets_html_abdc00e61db168210327a92655952d024"><div class="ttname"><a href="class_alfabets.html#abdc00e61db168210327a92655952d024">Alfabets::n_alf</a></div><div class="ttdeci">int n_alf()</div><div class="ttdoc">Consulta el némero de Alfabetos.</div></div>
+<div class="ttc" id="aclass_alfabets_html_aea12b508e72204de947f2c69c5d34966"><div class="ttname"><a href="class_alfabets.html#aea12b508e72204de947f2c69c5d34966">Alfabets::is_alf_there</a></div><div class="ttdeci">bool is_alf_there(const string ida)</div><div class="ttdoc">Comprueba que el alfabeto por el identificador ida está en Alfabetos.</div></div>
+<div class="ttc" id="aclass_encriptacions_html"><div class="ttname"><a href="class_encriptacions.html">Encriptacions</a></div><div class="ttdoc">Contiene los metodos prehechos de encriptar un mensaje.</div><div class="ttdef"><b>Definition:</b> <a href="_encriptacions_8hh_source.html#l00024">Encriptacions.hh:25</a></div></div>
+<div class="ttc" id="aclass_encriptacions_html_ab15086109fc056fd4157bdd92c096ed4"><div class="ttname"><a href="class_encriptacions.html#ab15086109fc056fd4157bdd92c096ed4">Encriptacions::encrip_perm</a></div><div class="ttdeci">void encrip_perm(const string ida, string msg, const int b)</div><div class="ttdoc">encripta mediante el método de permutación</div></div>
+<div class="ttc" id="aclass_encriptacions_html_afa690586659a43ca553ad14f4e0fb75c"><div class="ttname"><a href="class_encriptacions.html#afa690586659a43ca553ad14f4e0fb75c">Encriptacions::encrip_sust</a></div><div class="ttdeci">void encrip_sust(const string ida, string msg, const string cl)</div><div class="ttdoc">encripta mediante el método de sustitución</div></div>
+<div class="ttc" id="aclass_missatges_html"><div class="ttname"><a href="class_missatges.html">Missatges</a></div><div class="ttdoc">Es el conjunto de mensajes y contiene los alfabetos con su id y su información.</div><div class="ttdef"><b>Definition:</b> <a href="_missatges_8hh_source.html#l00024">Missatges.hh:25</a></div></div>
+<div class="ttc" id="aclass_missatges_html_a029ff77ff8e6e573aa8e1187a817424d"><div class="ttname"><a href="class_missatges.html#a029ff77ff8e6e573aa8e1187a817424d">Missatges::read_missatges</a></div><div class="ttdeci">void read_missatges()</div><div class="ttdoc">Funciona para leer los elementos de Alfabetos.</div></div>
+<div class="ttc" id="aclass_missatges_html_a1cb6dc974816b3a77656921f16aea6e2"><div class="ttname"><a href="class_missatges.html#a1cb6dc974816b3a77656921f16aea6e2">Missatges::print_missatges</a></div><div class="ttdeci">void print_missatges()</div><div class="ttdoc">Imprime Missatges por orden alfabético de la id.</div></div>
+<div class="ttc" id="aclass_missatges_html_a320ac868fb92eb5d21abcf794087e575"><div class="ttname"><a href="class_missatges.html#a320ac868fb92eb5d21abcf794087e575">Missatges::n_msg</a></div><div class="ttdeci">int n_msg()</div><div class="ttdoc">Retorna el número de mensajes.</div></div>
+<div class="ttc" id="aclass_missatges_html_a82c4ac7683df7f5384f2d4b457210c3b"><div class="ttname"><a href="class_missatges.html#a82c4ac7683df7f5384f2d4b457210c3b">Missatges::get_msg</a></div><div class="ttdeci">string get_msg(const string idm)</div><div class="ttdoc">Obtiene el objeto mensaje con idm.</div></div>
+<div class="ttc" id="aclass_missatges_html_aab5b28466d0cb7c449a03b4e5f353c94"><div class="ttname"><a href="class_missatges.html#aab5b28466d0cb7c449a03b4e5f353c94">Missatges::get_alf</a></div><div class="ttdeci">string get_alf(const string idm)</div><div class="ttdoc">Obtiene el objeto alfabeto asociado con el mensaje idm.</div></div>
+<div class="ttc" id="aclass_missatges_html_aada8db97054291c1eefb169c2d9a4ff6"><div class="ttname"><a href="class_missatges.html#aada8db97054291c1eefb169c2d9a4ff6">Missatges::is_msg_there</a></div><div class="ttdeci">bool is_msg_there(const string idm)</div><div class="ttdoc">Comprueba que el alfabeto por el identificador ida está en Missatges.</div></div>
+<div class="ttc" id="aclass_missatges_html_acb744dbfcb5a19975757061102062788"><div class="ttname"><a href="class_missatges.html#acb744dbfcb5a19975757061102062788">Missatges::del_msg</a></div><div class="ttdeci">void del_msg(const string idm)</div><div class="ttdoc">Borra el alfabeto identificado por idm.</div></div>
+<div class="ttc" id="aclass_missatges_html_afa398edd414f947c17bb8f04f8ae6418"><div class="ttname"><a href="class_missatges.html#afa398edd414f947c17bb8f04f8ae6418">Missatges::add_msg</a></div><div class="ttdeci">void add_msg(const string idm)</div><div class="ttdoc">Añade el alfabeto identificado por idm.</div></div>
+<div class="ttc" id="aprogram_8cc_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Parte principal de programa.</div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00027">program.cc:27</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>
