@@ -1,2 +1,2 @@
 # Pràctica de PRO2
-si: la pr
+si: la pràctica
