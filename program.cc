@@ -29,7 +29,8 @@ using namespace std;
 int main() {
 
   Alfabets alf;
-  alf.read_alfabets();
+  int a;
+  alf.read_alfabets(a);
 
   Missatges msg;
   msg.read_missatges();

@@ -13,6 +13,8 @@
 
 #ifndef NO_DIAGRAM
 #include <iostream>
+#include <map>
+#include "Alfabet.hh"
 using namespace std;
 #endif
 
@@ -24,6 +26,7 @@ using namespace std;
 class Alfabets 
 {
 private:
+  map<string, Alfabet> alfabets;
   
 public:
 
@@ -36,11 +39,11 @@ public:
   Alfabets();
 
   /**
-   * @brief Funciona para leer los elementos de Alfabetos
-   * \pre alfabetos es una sola línea no vacía 
+   * @brief Funcion para leer los elementos de Alfabetos
+   * \pre un numero A de alfabetos es una sola línea no vacía 
    * \post Alfabets con todos sus ids y datos
    */
-  void read_alfabets();
+  void read_alfabets(const int& a);
 
   /**
    * @brief Imprime Alfabetos por orden alfabético
@@ -58,7 +61,7 @@ public:
    * @return true 
    * @return false 
    */
-  bool is_alf_there(const string ida);
+  bool is_alf_there(const string& ida);
 
   /**
    * @brief Añade el alfabeto identificado por ida
@@ -67,7 +70,7 @@ public:
    * \post Se ha añadido ida a Alfabetos
    * @param ida 
    */
-  void add_alf(const string ida);
+  void add_alf(const string& ida);
 
   /**
    * @brief Elimina el mensaje alfabeto identificado por ida
@@ -76,7 +79,7 @@ public:
    * \post Se ha eliminador ida a Alfabetos
    * @param ida 
    */
-  void del_alf(const string ida);
+  void del_alf(const string& ida);
 
   /**
    * @brief Consulta el némero de Alfabetos
@@ -94,7 +97,7 @@ public:
    * \post Retorna el número de mensajes oara un alfabeto
    * @return int 
    */
-  int n_of_msg(const string ida);
+  int n_of_msg(const string& ida);
 };
 
 #endif
