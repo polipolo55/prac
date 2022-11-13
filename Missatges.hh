@@ -13,6 +13,7 @@
 
 #ifndef NO_DIAGRAM
 #include <iostream>
+#include <map>
 using namespace std;
 #endif
 
@@ -25,8 +26,8 @@ class Missatges
 {
 private: 
   struct msg_info {
-    string msg;
     string ida;
+    string msg;
   }; 
   map<string, msg_info> missatges;
   int nmsg = 0;
@@ -74,7 +75,7 @@ public:
   * @return true 
  * @return false 
   */
-  bool is_msg_there(const string idm);
+  bool is_msg_there(const string& idm);
 
   /**
    * @brief Borra el alfabeto identificado por idm
@@ -83,7 +84,7 @@ public:
    * \post Se ha borrado idm de Missatges
    * @param idm 
    */
-  void del_msg(const string idm);
+  void del_msg(const string& idm);
 
   /**
    * @brief Obtiene el objeto mensaje con idm
@@ -93,7 +94,7 @@ public:
    * @param idm 
    * @return string 
    */
-	string get_msg(const string idm);
+	string get_msg(const string& idm);
 
   /**
    * @brief Obtiene el objeto alfabeto asociado con el mensaje idm
@@ -103,7 +104,7 @@ public:
    * @param idm 
    * @return string 
    */
-	string get_alf(const string idm);
+	string get_alf(const string& idm);
 
   /**
    * @brief Retorna el número de mensajes

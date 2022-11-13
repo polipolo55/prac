@@ -99,6 +99,8 @@ public:
    * @return int 
    */
   int n_of_msg(const string& ida);
+
+  void add_msgs_alf(const string& ida, const int& n);
 };
 
 #endif

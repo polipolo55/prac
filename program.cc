@@ -34,12 +34,14 @@ int main() {
   Missatges msg;
   msg.read_missatges();
 
+
   Encriptacions enc;
 
   string s;
 
   cin >> s;
   while (s != "fin") {
+    cout << '#' << s << endl;
     if (s == "nuevo_mensaje" or s == "nm") {
       string ida;
       cin >> ida;
@@ -47,6 +49,7 @@ int main() {
         string idm;
         cin >> idm;
         if (!msg.is_msg_there(idm)) {
+          alf.add_msgs_alf(ida, 1);
           msg.add_msg(idm, ida);
           cout << msg.n_msg() << endl;
         } else
@@ -67,6 +70,7 @@ int main() {
       string idm;
       cin >> idm;
       if (msg.is_msg_there(idm)) {
+        alf.add_msgs_alf(msg.get_alf(idm), -1);
         msg.del_msg(idm);
         cout << msg.n_msg() << endl;
       } else

@@ -12,18 +12,22 @@ class Alfabet
 {
 private:
   map<char, char> mapalf;
-  int n_msg = 0;
+  bool especial = true;
+  int nmsg = 0;
   string alf;
 
 public:
 
 Alfabet();
 
-Alfabet(const string& alf);
+Alfabet(const string& input_alf);
 void print_alfabet();
-void add_msg_alf(const int& n);
+void add_msgs_alf(const int& n);
 int n_msg_alf();
-int n_of_msg();
+bool is_special();
+int size();
+char find_pos_on_map(const char& c);
+char find_pos_of_char(const char& c);
 
 };
 #endif
