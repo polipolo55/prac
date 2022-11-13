@@ -11,10 +11,12 @@ using namespace std;
 class Alfabet 
 {
 private:
-  map<char, char> mapalf;
-  bool especial = true;
+  map<char, int> mapalf;
+  bool especial;
   int nmsg = 0;
   string alf;
+
+
 
 public:
 
@@ -22,12 +24,13 @@ Alfabet();
 
 Alfabet(const string& input_alf);
 void print_alfabet();
+bool check_special(const string& s);
 void add_msgs_alf(const int& n);
 int n_msg_alf();
-bool is_special();
+bool is_special() const;
 int size();
-char find_pos_on_map(const char& c);
-char find_pos_of_char(const char& c);
+int find_pos_on_map(const char& c) ;
+int find_char_int_pos(const int& c) const;
 
 };
 #endif

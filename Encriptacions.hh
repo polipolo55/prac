@@ -44,7 +44,7 @@ public:
    * @param msg 
    * @param cl 
    */
-  void encrip_sust(const string ida, string msg, const string cl);
+  void encrip_sust(const Alfabet& alf, const string& msg, const string& cl);
 
   /**
    * @brief encripta mediante el método de permutación
@@ -55,7 +55,7 @@ public:
    * @param msg 
    * @param b 
    */
-  void encrip_perm(const string ida, string msg, const int b);
+  void encrip_perm(const string& ida,const string& msg, const int& b);
   
 };
 

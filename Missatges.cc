@@ -8,9 +8,8 @@ Missatges::Missatges() {}
 Alfabets alf;
 
 void Missatges::read_missatges(){
-  int n_msg;
-  cin >> n_msg;
-  for(int i; i < n_msg; ++i) {
+  cin >> nmsg;
+  for(int i = 0; i < nmsg; ++i) {
     string idm, ida;
     cin >> idm >> ida;
     add_msg(idm, ida);
@@ -27,11 +26,12 @@ void Missatges::print_missatges() {
 
 void Missatges::add_msg(const string& idm, const string& ida) {
   string msg;
-  cin.ignore(streamsize(),'\n');
+  cin.ignore(1024,'\n');
   getline(cin, msg);
-  missatges[idm].ida = ida;
-  missatges[idm].msg = msg;
-  ++nmsg;
+  msg_info aux;
+  aux.ida = ida;
+  aux.msg = msg;
+  missatges[idm] = aux;
 }
 
 bool Missatges::is_msg_there(const string& idm) {
@@ -39,7 +39,8 @@ bool Missatges::is_msg_there(const string& idm) {
 }
 
 void Missatges::del_msg(const string& idm) {
-  if(auto it = missatges.find(idm) != missatges.end()) {
+  auto it = missatges.find(idm);
+  if(it != missatges.end()) {
     missatges.erase(idm);
     --nmsg;
   }

@@ -52,10 +52,8 @@ int main() {
           alf.add_msgs_alf(ida, 1);
           msg.add_msg(idm, ida);
           cout << msg.n_msg() << endl;
-        } else
-          cout << "ja existeix el missatge" << idm << endl;
-      } else
-        cout << "no existeix l'alfabet: " << ida << endl;
+        } else cout << "ja existeix el missatge" << idm << endl;
+      } else cout << "no existeix l'alfabet: " << ida << endl;
 
     } else if (s == "nuevo_alfabeto" or s == "na") {
       string ida;
@@ -99,7 +97,9 @@ int main() {
       if (msg.is_msg_there(idm)) {
         string cl;
         cin >> cl;
-        enc.encrip_sust(msg.get_alf(idm), msg.get_msg(idm), cl);
+        string ida = msg.get_alf(idm);
+        Alfabet aux = alf.get_alf(ida);
+        enc.encrip_sust(aux, msg.get_msg(idm), cl);
       } else
         cout << "el missatge " << idm << " no existeix" << endl;
 
