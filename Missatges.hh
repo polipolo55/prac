@@ -24,7 +24,12 @@ using namespace std;
 class Missatges 
 {
 private: 
-
+  struct msg_info {
+    string msg;
+    string ida;
+  }; 
+  map<string, msg_info> missatges;
+  int nmsg = 0;
 public:
 
   /**
@@ -34,6 +39,8 @@ public:
    * \post Crea missatges vacío
    */
   Missatges();
+
+
 
   /**
    * @brief Funciona para leer los elementos de Alfabetos
@@ -49,25 +56,25 @@ public:
    */
   void print_missatges();
 
-    /**
-   * @brief Comprueba que el alfabeto por el identificador ida está en Missatges
-   * 
-   * \pre <em>cert<em>
-   * \post Retorna si ida está en Missatges o no
-   * @param idm
-   * @return true 
-   * @return false 
-   */
-  bool is_msg_there(const string idm);
-  
-  /**
+     /**
    * @brief Añade el alfabeto identificado por idm
    * 
    * \pre <em>cierto<em>
    * \post Se ha añadido idm a Missatges
    * @param idm 
    */
-  void add_msg(const string idm);
+  void add_msg(const string& idm, const string& ida);
+
+   /**
+  * @brief Comprueba que el alfabeto por el identificador ida está en Missatges
+  * 
+  * \pre <em>cert<em>
+  * \post Retorna si ida está en Missatges o no
+  * @param idm
+  * @return true 
+ * @return false 
+  */
+  bool is_msg_there(const string idm);
 
   /**
    * @brief Borra el alfabeto identificado por idm

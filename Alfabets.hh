@@ -27,6 +27,7 @@ class Alfabets
 {
 private:
   map<string, Alfabet> alfabets;
+  int nalf = 0;
   
 public:
 
@@ -43,11 +44,11 @@ public:
    * \pre un numero A de alfabetos es una sola línea no vacía 
    * \post Alfabets con todos sus ids y datos
    */
-  void read_alfabets(const int& a);
+  void read_alfabets();
 
   /**
    * @brief Imprime Alfabetos por orden alfabético
-   * \pre <em>cierto<em>
+   * \pre <em>cierto<em>a
    * \post se imprimen los datos en pantalla
    */
   void print_alfabets();

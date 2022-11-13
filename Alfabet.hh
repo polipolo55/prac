@@ -21,6 +21,9 @@ Alfabet();
 
 Alfabet(const string& alf);
 void print_alfabet();
+void add_msg_alf(const int& n);
+int n_msg_alf();
+int n_of_msg();
 
 };
 #endif

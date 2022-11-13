@@ -29,8 +29,7 @@ using namespace std;
 int main() {
 
   Alfabets alf;
-  int a;
-  alf.read_alfabets(a);
+  alf.read_alfabets();
 
   Missatges msg;
   msg.read_missatges();
@@ -48,7 +47,7 @@ int main() {
         string idm;
         cin >> idm;
         if (!msg.is_msg_there(idm)) {
-          msg.add_msg(idm);
+          msg.add_msg(idm, ida);
           cout << msg.n_msg() << endl;
         } else
           cout << "ja existeix el missatge" << idm << endl;
