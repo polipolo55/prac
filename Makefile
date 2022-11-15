@@ -16,6 +16,9 @@ Missatges: Missatges.cc
 Alfabet: Alfabet.cc
 	g++ -c Alfabet.cc $(flags)
 
+tar: Alfabet.cc Alfabet.hh Alfabets.cc Alfabets.hh Missatges.cc Missatges.hh program.cc
+	tar cvf practica.tar Alfabet.cc Alfabet.hh Alfabets.cc Alfabets.hh Missatges.cc Missatges.hh program.cc
+
 clean:
 	rm -f *.o
 	rm -f *.exe

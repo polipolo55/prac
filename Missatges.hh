@@ -43,12 +43,7 @@ public:
 
 
 
-  /**
-   * @brief Funciona para leer los elementos de Alfabetos
-   * \pre Mensaje es una sola línea no vacía 
-   * \post Missatges con todos sus ids y datos
-   */
-  void read_missatges(const int& n);
+  //void read_missatges(const int& n);
 
   /**
    * @brief Imprime Missatges por orden alfabético de la id

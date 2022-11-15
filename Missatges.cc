@@ -7,9 +7,7 @@ using namespace std;
 Missatges::Missatges() {}
 Alfabets alf;
 
-void Missatges::read_missatges(const int& n){
-
-}
+//void Missatges::read_missatges(const int& n){}
 void Missatges::print_missatges() { 
   int num = 1;
 	for (auto it = missatges.begin(); it != missatges.end(); ++it) {

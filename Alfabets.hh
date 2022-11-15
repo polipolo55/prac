@@ -109,7 +109,7 @@ public:
 
   void decrip_sust(const string& ida, const string& enc, const string& cl);
 
-  void encrip_perm(const string& ida,const string& msg, const int& b);
+  //void encrip_perm(const string& ida,const string& msg, const int& b);
 
 };
 

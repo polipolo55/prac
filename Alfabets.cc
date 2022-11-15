@@ -81,9 +81,9 @@ void Alfabets::encrip_sust(const string& ida, const string& msg, const string& c
     }
   } else {
     for (int i = 0; i < n; ++i) {
-      char px = msg[i];
-      char py = cl[i%n_cl];
-      s[i] = alf.find_char_int_pos((alf.find_pos_on_map(px) + alf.find_pos_on_map(py))%alf.size());
+      char px = alf.find_pos_on_map(msg[i]);
+      char py = alf.find_pos_on_map(cl[i%n_cl]);
+      s[i] = alf.find_char_int_pos((px + py)%alf.size());
     }
   }
   cout << "\""<< s << "\"" <<endl;
@@ -94,7 +94,8 @@ void Alfabets::decrip_sust(const string& ida, const string& enc, const string& c
 	int n = enc.size();
 	int n_c = cl.size();
   bool special = alf.is_special();
-	string t = enc;
+  char fl = alf.find_pos_on_map(0);
+	string r = enc;
 
 	if (special) {
 	  for (int i = 0; i < n; ++i) {
@@ -102,19 +103,19 @@ void Alfabets::decrip_sust(const string& ida, const string& enc, const string& c
       char b = cl[i%n_c];
 		  char a = c- b;
 		  if (a < 0) a += alf.size();
-		  t[i] = a + alf.find_pos_on_map(0);
+		  r[i] = a + fl;
 	  }
 	  } else {
       for (int i = 0; i < n; ++i) {
-      char c = enc[i];
-      char b = cl[i%n_c];
-		  char a = alf.find_pos_on_map(c) - alf.find_pos_on_map(b);
+      char c = alf.find_pos_on_map(enc[i]);
+      char b = alf.find_pos_on_map(cl[i%n_c]);
+		  char a = c - b;
 		  if (a < 0) a += alf.size();
-		  t[i] = alf.find_char_int_pos(a);
+		  r[i] = alf.find_char_int_pos(a);
 	  }
 	}
-	cout << "\""<< t << "\""<< endl;
+	cout << "\""<< r << "\""<< endl;
 }
 
 
-void Alfabets::encrip_perm(const string& ida,const string& msg, const int& b) {}
+//void Alfabets::encrip_perm(const string& ida,const string& msg, const int& b) {}
