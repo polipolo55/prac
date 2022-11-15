@@ -16,8 +16,6 @@ private:
   int nmsg = 0;
   string alf;
 
-
-
 public:
 
 Alfabet();
@@ -29,8 +27,8 @@ void add_msgs_alf(const int& n);
 int n_msg_alf();
 bool is_special() const;
 int size();
-char find_pos_on_map(const char& c) ;
-char find_char_int_pos(const int& c) ;
+int find_pos_on_map(const char& c) ;
+int find_char_int_pos(const int& c) ;
 
 };
 #endif
