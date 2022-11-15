@@ -30,7 +30,7 @@ int n_msg_alf();
 bool is_special() const;
 int size();
 int find_pos_on_map(const char& c) ;
-int find_char_int_pos(const int& c) const;
+int find_char_int_pos(const int& c) ;
 
 };
 #endif

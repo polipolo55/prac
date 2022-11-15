@@ -7,14 +7,8 @@ using namespace std;
 Missatges::Missatges() {}
 Alfabets alf;
 
-void Missatges::read_missatges(){
-  cin >> nmsg;
-  for(int i = 0; i < nmsg; ++i) {
-    string idm, ida;
-    cin >> idm >> ida;
-    add_msg(idm, ida);
-    alf.add_msgs_alf(ida, 1);
-  }
+void Missatges::read_missatges(const int& n){
+
 }
 void Missatges::print_missatges() { 
   int num = 1;
@@ -32,6 +26,7 @@ void Missatges::add_msg(const string& idm, const string& ida) {
   aux.ida = ida;
   aux.msg = msg;
   missatges[idm] = aux;
+  ++nmsg;
 }
 
 bool Missatges::is_msg_there(const string& idm) {

@@ -1,4 +1,4 @@
-#listar_alfabetos
+#listar_alfabetos 
 1. abc
 especial [a..c] 0 mensajes
 2. base_adn
@@ -11,7 +11,7 @@ especial [ ..~] 0 mensajes
 normal "ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ !"#$%&'()*+,-./0123456789:;<=>?@" 0 mensajes
 6. minusculas
 normal "abcdefghijklmnopqrstuvwxyz " 0 mensajes
-#listar_mensajes
+#listar_mensajes 
 1. Assembler1
 full_interv
 "switch_to_pm: / cli / lgdt [gdt_descriptor] / mov eax, cr0 / or eax, 1 / mov cr0,eax / jmp CODE_SEG:init_pm // Let's start with / cli. This instruction basically disables interrupts. We have to do this, because if an interrupt fires while we are in protected mode, but before we have installed the IDT, the CPU will triple fault and reset. The problem is, there is literally no standard C code that emits this instruction, so we are going to have to use inline assembly here. The same applies to lgdt [gdt_descriptor]"
@@ -36,53 +36,30 @@ base_arn
 8. Resistire
 full_interv
 "Cuando pierda todas las partidas / Cuando duerma con la soledad / Cuando se me cierren las salidas / Y la noche no me deje en paz."
-#nuevo_mensaje
+#nuevo_mensaje Contrato_frances_2 full_no_interv
 8
-#nuevo_mensaje
+#nuevo_mensaje RNA_string_2 base_arn
 8
-#nm
-ja existeix el missatgeRNA_string_2
-#base_arn
-#AAGAUGCCCCGUAAGAUGCCCCGUCGU
-#nm
-no existeix l'alfabet: acb
-#acb
-#nuevo_alfabeto
+#nm RNA_string_2 base_arn
+error: ya existe un mensaje con ese identificador
+#AAGAUGCCCCGUAAGAUGCCCCGUCGU #nm acb acb
+error: el alfabeto no existe
+#acb #nuevo_alfabeto bca
 6
-#na
+#na abc
 ja existeix l'alfabet: abc
-#abc
-#borra_mensaje
+#abc #borra_mensaje DNA_string_2
 7
-#bm
+#bm DNA_string_2
 el missatge DNA_string_2 no existeix
-#codificar_sustitucion_guardado
+#codificar_sustitucion_guardado Hell "curtis"
  done
-#mayfield
-#csg
+#mayfield #csg Resistire "Duo"
 á / -26Í / -22– / -48≤ / -78Ÿ / -39ﬁ / -34d / 5Â / -27ÿ / -40© / -87Á / -25” / -45• / -91ï / -12„ / -29≥ / -77Ÿ / -39– / -48∑ / -73ï / -12€ / -37• / -91Ë / -24è / -18¥ / -76÷ / -42· / -31∏ / -72ﬁ / -34” / -45• / -91Ë / -24è / -18s / 20ï / -12≤ / -78π / -71÷ / -42› / -35® / -88‰ / -28è / -18® / -88Í / -22‘ / -44∂ / -74‚ / -30– / -48d / 5ÿ / -40ﬁ / -34≤ / -78ï / -12€ / -37• / -91ï / -12‚ / -30≥ / -77· / -31‘ / -44® / -88÷ / -42” / -45d / 5§ / -92è / -18á / -26Í / -22– / -48≤ / -78Ÿ / -39ﬁ / -34d / 5Ë / -24‘ / -44d / 5‚ / -30‘ / -44d / 5ÿ / -40ÿ / -40© / -87Á / -25· / -31© / -87„ / -29è / -18∞ / -80÷ / -42‚ / -30d / 5Ë / -24– / -48∞ / -80ﬁ / -34” / -45• / -91Ë / -24è / -18s / 20ï / -12» / -56d / 5· / -31– / -48d / 5„ / -29ﬁ / -34ß / -89› / -35‘ / -44d / 5„ / -29ﬁ / -34d / 5‚ / -30‘ / -44d / 5Ÿ / -39‘ / -44Æ / -82⁄ / -38è / -18© / -87„ / -29è / -18¥ / -76÷ / -42È / -23r / 19 done
-#Dinamico
-#csg
+#Dinamico #csg DNA_string_2 "GGGG"
 el missatge DNA_string_2 no existeix
-#GGGG
-#codificar_sustitucion
- done
-#una
-#clave
-#humanidad
-#yo
-#te
-#amo
-#porque
-#estas
-#todo
-#el
-#tiempo
-#metiendo
-#el
-#secreto
-#de
-#la
+#codificar_sustitucion  done
+#una #clave #humanidad #yo #te #amo #porque #estas #todo #el #tiempo #metiendo #el #secreto #de #la 
 1. abc
 especial [a..c] 0 mensajes
 2. base_adn
@@ -97,72 +74,18 @@ especial [ ..~] 0 mensajes
 normal "ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ !"#$%&'()*+,-./0123456789:;<=>?@" 1 mensajes
 7. minusculas
 normal "abcdefghijklmnopqrstuvwxyz " 0 mensajes
-#vida
-#en
-#tus
-#pantalones
-#y
-#olvidando
-#que
-#estas
-#alla
-#y
-#sentandote
-#sobre
-#el
-#cs
-l'alfabet mayusculas no existeix
-#CLAVE
-#YO
-#LA
-#AME
-#Y
-#ELLA
-#NO
-#ME
-#AMO
-#YO
-#LE
-#DI
-#MI
-#ALMA
-#Y
-#ELLA
-#SE
-#BURLO
-#decodificar_sustitucion
-#minusculas
-#esto
-#es
-#una
-#clave
-#lleommv
-#xmynbdeueqfscnvhtymervlsuxsvgndprsbrmoqkmzxmwfrndwkteebtptidhwsz
-#dmhxn
-#dpktowdgtasecngrsz
-#kofzmvtacsrpnr
-#dudamdecdozbrry
-#t
-#poonidjgpqirde
-#ds
-#mayusculas
-#CLAVE
-#Z
-#FEBLMZD
-#KEFPCKNIDOP
-#VQQKYIDNP
-#YMBXIUENXAUBBPLFEBCEUFWBLI
-#borra_alfabeto
+#vida #en #tus #pantalones #y #olvidando #que #estas #alla #y #sentandote #sobre #el #cs l'alfabet mayusculas no existeix
+#CLAVE #YO #LA #AME #Y #ELLA #NO #ME #AMO #YO #LE #DI #MI #ALMA #Y #ELLA #SE #BURLO #decodificar_sustitucion #minusculas #esto #es #una #clave #lleommv #xmynbdeueqfscnvhtymervlsuxsvgndprsbrmoqkmzxmwfrndwkteebtptidhwsz #dmhxn #dpktowdgtasecngrsz #kofzmvtacsrpnr #dudamdecdozbrry #t #poonidjgpqirde #ds #mayusculas #CLAVE #Z #FEBLMZD #KEFPCKNIDOP #VQQKYIDNP #YMBXIUENXAUBBPLFEBCEUFWBLI #borra_alfabeto mayusculas
 no existeix l'alfabet mayusculas
-#ba
+#ba base_adn
 error: hay mensajes guardados con este alfabeto
 error: el alfabeto no existe
-#borra_mensaje
+#borra_mensaje DNA_string_1
 6
-#borra_alfabeto
+#borra_alfabeto base_adn
 error: hay mensajes guardados con este alfabeto
 error: el alfabeto no existe
-#la
+#la 
 1. abc
 especial [a..c] 0 mensajes
 2. base_adn
@@ -177,7 +100,7 @@ especial [ ..~] 0 mensajes
 normal "ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ !"#$%&'()*+,-./0123456789:;<=>?@" 1 mensajes
 7. minusculas
 normal "abcdefghijklmnopqrstuvwxyz " 0 mensajes
-#lm
+#lm 
 1. Assembler1
 full_interv
 "switch_to_pm: / cli / lgdt [gdt_descriptor] / mov eax, cr0 / or eax, 1 / mov cr0,eax / jmp CODE_SEG:init_pm // Let's start with / cli. This instruction basically disables interrupts. We have to do this, because if an interrupt fires while we are in protected mode, but before we have installed the IDT, the CPU will triple fault and reset. The problem is, there is literally no standard C code that emits this instruction, so we are going to have to use inline assembly here. The same applies to lgdt [gdt_descriptor]"

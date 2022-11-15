@@ -19,7 +19,9 @@ void Encriptacions::encrip_sust(const Alfabet& alf,const string& msg, const stri
       cout << char(fl + px + py);
 
     } else {
-      
+      int px = mapalf[msg[i]];
+      int py = mapalf[cl[i%n_cl]];
+      char c = alf[px + py];
 
     }
   }

@@ -48,7 +48,7 @@ public:
    * \pre Mensaje es una sola línea no vacía 
    * \post Missatges con todos sus ids y datos
    */
-  void read_missatges();
+  void read_missatges(const int& n);
 
   /**
    * @brief Imprime Missatges por orden alfabético de la id

@@ -103,6 +103,11 @@ public:
   void add_msgs_alf(const string& ida, const int& n);
 
   Alfabet get_alf(const string& ida);
+
+  void encrip_sust(const string& ida, const string& msg, const string& cl);
+
+  void encrip_perm(const string& ida,const string& msg, const int& b);
+
 };
 
 #endif
