@@ -100,11 +100,9 @@ int main() {
       if (alf.is_alf_there(ida)) {
         if (1 > alf.n_of_msg(ida)) {
           alf.del_alf(ida);
-        } else
-          cout << "error: hay mensajes guardados con el alfabeto" << endl;
-      } else
-        cout << "error: el alfabeto no existe" << endl;
-
+          cout << alf.n_alf() << endl;
+        } else cout << "error: hay mensajes guardados con el alfabeto" << endl;
+      } else cout << "error: el alfabeto no existe" << endl;
     } else if (s == "listar_mensajes" or s == "lm") {
       cout << "#" << s << endl;
       msg.print_missatges();
@@ -137,12 +135,22 @@ int main() {
       if (alf.is_alf_there(ida)) {
         //cout << "param encrip: " << ida << " " << cl << " " << msg << endl; 
         alf.encrip_sust(ida, msg, cl);
-      } else {
-      cout << "error: el alfabeto no existe" << endl;
+      } else cout << "error: el alfabeto no existe" << endl;
+      
+    } else if (s == "decodificar_sustitucion" or s == "ds") {
+      string ida, cl;
+      cin >> ida;
+      cin.ignore();
+      getline(cin, cl);
+      cout << "#" << s << " "<< ida << " \"" << cl << "\"" << endl;
+      if (alf.is_alf_there(ida)) {
+        string msg;
+        getline(cin, msg);
+        alf.decrip_sust(ida, msg, cl);
       }
-    } else if (s == "decodificar_sustitución" or s == "ds") {
-      // mirar com fer es pot fer al reves depenent del algoritme
-    } else if (s == "codificar_permutacion_guardado" or s == "cpg") {
+      else cout << "error: el alfabeto no existe" << endl;
+
+    } /*else if (s == "codificar_permutacion_guardado" or s == "cpg") {
       string idm;
       cin >> idm;
       if (msg.is_msg_there(idm)) {
@@ -164,7 +172,7 @@ int main() {
 
     } else if (s == "decodificar_permutacion" or s == "dp") {
       // mirar com fer-ho un cop pensat l'algoritme
-    } 
+    } */
 
     cin >> s;
   } 

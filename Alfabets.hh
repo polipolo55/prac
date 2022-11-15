@@ -107,6 +107,8 @@ public:
 
   void encrip_sust(const string& ida, const string& msg, const string& cl);
 
+  void decrip_sust(const string& ida, const string& enc, const string& cl);
+
   void encrip_perm(const string& ida,const string& msg, const int& b);
 
 };

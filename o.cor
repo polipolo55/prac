@@ -62,6 +62,10 @@ error: el mensaje no existe
 "lleommv xmynbdeueqfscnvhtymervlsuxsvgndprsbrmoqkmzxmwfrndwkteebtptidhwsz dmhxn dpktowdgtasecngrsz kofzmvtacsrpnr dudamdecdozbrry t poonidjgpqirde"
 #cs mayusculas "CLAVE"
 error: el alfabeto no existe
+#decodificar_sustitucion minusculas "esto es una clave"
+"humanidad yo te amo porque estas todo el tiempo metiendo el secreto de la vida en tus pantalones y olvidando que estas alla y sentandote sobre el"
+#ds mayusculas "CLAVE"
+error: el alfabeto no existe
 #borra_alfabeto mayusculas
 error: el alfabeto no existe
 #ba base_adn
@@ -69,7 +73,7 @@ error: hay mensajes guardados con el alfabeto
 #borra_mensaje DNA_string_1
 8
 #borra_alfabeto base_adn
-error: el alfabeto no existe
+6
 #la
 1. abc
 especial [a..c] 0 mensajes

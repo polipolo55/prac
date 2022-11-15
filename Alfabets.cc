@@ -44,8 +44,9 @@ void Alfabets::del_alf(const string& ida) {
   if (it != alfabets.end()) {
     if(it->second.n_msg_alf() == 0){
       alfabets.erase(it);
+      --nalf;
     } else cout << "error: hay mensajes guardados con este alfabeto" << endl;
-  } cout << "error: el alfabeto no existe" << endl;
+  } else cout << "error: el alfabeto no existe" << endl;
 }
 
 int Alfabets::n_alf() {
@@ -88,6 +89,32 @@ void Alfabets::encrip_sust(const string& ida, const string& msg, const string& c
   cout << "\""<< s << "\"" <<endl;
 }
 
+void Alfabets::decrip_sust(const string& ida, const string& enc, const string& cl) {
+	Alfabet alf = alfabets[ida];
+	int n = enc.size();
+	int n_c = cl.size();
+  bool special = alf.is_special();
+	string t = enc;
+
+	if (special) {
+	  for (int i = 0; i < n; ++i) {
+      char c = enc[i];
+      char b = cl[i%n_c];
+		  char a = c- b;
+		  if (a < 0) a += alf.size();
+		  t[i] = a + alf.find_pos_on_map(0);
+	  }
+	  } else {
+      for (int i = 0; i < n; ++i) {
+      char c = enc[i];
+      char b = cl[i%n_c];
+		  char a = alf.find_pos_on_map(c) - alf.find_pos_on_map(b);
+		  if (a < 0) a += alf.size();
+		  t[i] = alf.find_char_int_pos(a);
+	  }
+	}
+	cout << "\""<< t << "\""<< endl;
+}
 
 
 void Alfabets::encrip_perm(const string& ida,const string& msg, const int& b) {}
