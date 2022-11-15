@@ -4,14 +4,14 @@
 #ifndef NO_DIAGRAM
 #include <map>
 #include <iostream>
+using namespace std;
 #endif
 
-using namespace std;
 
 class Alfabet 
 {
 private:
-  map<char, char> mapalf;
+  map<char, int> mapalf;
   bool especial;
   int nmsg = 0;
   string alf;

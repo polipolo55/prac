@@ -61,9 +61,6 @@ void Alfabets::add_msgs_alf(const string& ida, const int& n) {
   alfabets[ida].add_msgs_alf(n);
 }
 
-Alfabet Alfabets::get_alf(const string& ida) {
-  return alfabets[ida];
-}
 
 void Alfabets::encrip_sust(const string& ida, const string& msg, const string& cl) {
   int n = msg.size();

@@ -20,10 +20,6 @@
 #include <iostream>
 using namespace std;
 
-void trash(const int& n){
-    string trash;
-    for (int i = 0; i < n; ++i) getline(cin, trash);
-}
 
 /**
  * @brief Parte principal de programa
@@ -58,18 +54,16 @@ int main() {
       cin >> ida;
       cout << "#" << s << " " <<idm << ' ' << ida << endl;
 
-      if (!msg.is_msg_there(idm)) {
-        if (alf.is_alf_there(ida)) {
+      if (alf.is_alf_there(ida)) {
+        if (!msg.is_msg_there(idm)) {
           alf.add_msgs_alf(ida, 1);
           msg.add_msg(idm, ida);
           cout << msg.n_msg() << endl;
         } else {
-          trash(1);
-          cout << "error: el alfabeto no existe"<< endl;
+          cout << "error: ya existe un mensaje con ese identificador"<< endl;
         }
       } else { 
-        cout << "error: ya existe un mensaje con ese identificador"<< endl;
-        trash(1);
+        cout << "error: el alfabeto no existe" << endl;
       }
 
     } else if (s == "nuevo_alfabeto" or s == "na") {
