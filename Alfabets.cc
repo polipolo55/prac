@@ -68,33 +68,26 @@ void Alfabets::encrip_sust(const string& ida, const string& msg, const string& c
   int n = msg.size();
   int n_cl = cl.size();
   Alfabet alf = alfabets[ida];
-  int fl = alf.find_pos_on_map(0);
+  char fl = alf.find_pos_on_map(0);
+  bool special = alf.is_special();
+  string s = msg;
   
-  for (int i = 0; i < n; ++i){
-    if (alf.is_special()) {
-      int px = msg[i] - fl;
-      int py = cl[i%n_cl] - fl;
-      cout << char(fl + px + py) << " / ";
-      //cout << "debug encript -----------------" << endl;
-      //cout << px << " " << py << " " << char(px) << " " << char(py) << " " << fl+px+py << " fl:"<< fl << endl;
-
-      //cout << char((px + py - 2*fl)%alf.size() + fl);
-      //s[i] = msg[i] + cl[i%n_cl] - 2*char(alf.find_pos_on_map(0))%alf.size() + alf.find_pos_on_map(0);
-      
-
-
-    } else {
-      
-      //int px = alf.find_pos_on_map(msg[i]);
-      //int py = alf.find_pos_on_map(cl[i%n_cl]);
-      //char c = char(alf.find_char_int_pos(px + py));
-      //cout << px;
-      
-      //cout << char(alf.find_pos_on_map((alf.find_char_int_pos(msg[i]) + alf.find_char_int_pos(cl[i%n_cl]))%alf.size()));
-
+  if (special) {
+    for (int i = 0; i < n; ++i) {
+      char px = msg[i] - fl;
+      char py = cl[i%n_cl] - fl;
+      s[i] = (px + py)%alf.size() + fl;
+    }
+  } else {
+    for (int i = 0; i < n; ++i) {
+      char px = msg[i];
+      char py = cl[i%n_cl];
+      s[i] = alf.find_char_int_pos((alf.find_pos_on_map(px) + alf.find_pos_on_map(py))%alf.size());
     }
   }
-  //cout << s << endl;
+  cout << "\""<< s << "\"" <<endl;
 }
+
+
 
 void Alfabets::encrip_perm(const string& ida,const string& msg, const int& b) {}

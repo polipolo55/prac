@@ -53,27 +53,17 @@ error: el alfabeto ya existe
 #bm DNA_string_2
 error: el mensaje no existe
 #codificar_sustitucion_guardado Hell "curtis mayfield"
+"fhdlhnncrveqjkwjyhxh rlaxmmpwcdybgdrvq ywmdlontxgqefltleos"
 #csg Resistire "Duo Dinamico"
-g /   / ∞ / n / à / ∏ / n / ± / ∂ / Æ / µ / ≥ / Ö / u / √ / o / à / ™ / ¡ / a / π / ™ / ∂ / o / î / ∂ / ¡ / t / ç / ≠ / Ø / ¥ / m / x / c / í / ô / ∂ / Ω / d / ì / i / ≤ / ∂ / ≤ / ª / ∞ / ∞ / D / ∏ / æ / n / D / µ / Ø / a / ¿ / ∏ / Ø / ¥ / à / ∂ / ≥ /   / S / i / ë / ∂ / Æ / ∑ / ß / æ / D / » / ¥ /   / ë / Æ / n / § / ∂ / Æ / µ / ¡ / â / √ / o / l / Ö / º / n / ¥ / Æ / µ / ¨ / ≥ / Ö / » / o / / / D / ¢ / n / ≠ / Æ / i / ± / æ / á / Ω / ¥ /   / í / ∏ / n / Æ / ≤ / i / ß / ¥ / é / ∫ / o / e / í / i / æ / ¢ / « / w / #csg DNA_string_2 "GGGG"
-el missatge DNA_string_2 no existeix
-#la
-1. abc
-especial [a..c] 0 mensajes
-2. base_adn
-normal "GATC" 1 mensajes
-3. base_arn
-normal "ACGU" 2 mensajes
-4. bca
-normal "bca" 0 mensajes
-5. full_interv
-especial [ ..~] 4 mensajes
-6. full_no_interv
-normal "ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ !"#$%&'()*+,-./0123456789:;<=>?@" 1 mensajes
-7. minusculas
-normal "abcdefghijklmnopqrstuvwxyz " 1 mensajes
-l'alfabet mayusculas no existeix
+"gkQn)YnRWOVT&udo)KbaZKWo5Wbt.NPUmxc3:W^d4iSWS\QQDY_nDVPaaYPU)WT Si2WOXH_DiU 2OnEWOVb*dol&]nUOVMT&io/DCnNOiR_(^U 3YnOSiHU/[oe3i_Chw"
+#csg DNA_string_2 "GGGG"
+error: el mensaje no existe
+#codificar_sustitucion minusculas "esto es una clave"
+"lleommv xmynbdeueqfscnvhtymervlsuxsvgndprsbrmoqkmzxmwfrndwkteebtptidhwsz dmhxn dpktowdgtasecngrsz kofzmvtacsrpnr dudamdecdozbrry t poonidjgpqirde"
+#cs mayusculas "CLAVE"
+error: el alfabeto no existe
 #borra_alfabeto mayusculas
-error: el alfabeto no existemayusculas
+error: el alfabeto no existe
 #ba base_adn
 error: hay mensajes guardados con el alfabeto
 #borra_mensaje DNA_string_1

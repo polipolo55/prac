@@ -11,7 +11,7 @@ using namespace std;
 class Alfabet 
 {
 private:
-  map<char, int> mapalf;
+  map<char, char> mapalf;
   bool especial;
   int nmsg = 0;
   string alf;
@@ -29,8 +29,8 @@ void add_msgs_alf(const int& n);
 int n_msg_alf();
 bool is_special() const;
 int size();
-int find_pos_on_map(const char& c) ;
-int find_char_int_pos(const int& c) ;
+char find_pos_on_map(const char& c) ;
+char find_char_int_pos(const int& c) ;
 
 };
 #endif

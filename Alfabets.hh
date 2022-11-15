@@ -28,6 +28,7 @@ class Alfabets
 private:
   map<string, Alfabet> alfabets;
   int nalf = 0;
+
   
 public:
 
