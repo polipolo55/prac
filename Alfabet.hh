@@ -1,3 +1,11 @@
+/**
+ * @file Alfabet.hh
+ * @author Pol Casanovas Puig (pol.casanovas.puig@estudiantat.upc.edu)
+ * @brief  Especificacion del Alfabeto individual
+ * 
+ * 
+ */
+
 #ifndef ALFABET_HH
 #define ALFABET_HH
 
@@ -7,7 +15,11 @@
 using namespace std;
 #endif
 
-
+/**
+ * @class Alfabet
+ * @brief Representa una unidad de alfabeto dentro del conjunto alfabetos
+ * 
+ */
 class Alfabet 
 {
 private:

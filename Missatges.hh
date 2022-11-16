@@ -3,8 +3,6 @@
  * 
  * @author Pol Casanovas Puig (pol.casanovas.puig@estudiantat.upc.edu)
  * @brief Especificacion del conjunto de Mensajes
- * @version 0.1
- * @date 07-11-22
  * 
  */
 
