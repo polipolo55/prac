@@ -102,8 +102,8 @@ void Alfabets::decrip_sust(const string& ida, const string& enc, const string& c
 		  if (a < 0) a += alf.size();
 		  r[i] = a + fl;
 	  }
-	  } else {
-      for (int i = 0; i < n; ++i) {
+	} else {
+    for (int i = 0; i < n; ++i) {
       char c = alf.find_pos_on_map(enc[i]);
       char b = alf.find_pos_on_map(cl[i%n_c]);
 		  char a = c - b;
