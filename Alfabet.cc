@@ -42,10 +42,10 @@ int Alfabet::size() {
   return alf.size();
 }
 
-char Alfabet::find_pos_on_map(const char& c) {
+int Alfabet::find_pos_on_map(const char& c) {
   return mapalf[c];
 }
 
-char Alfabet::find_char_int_pos(const int& c) { 
+int Alfabet::find_char_int_pos(const int& c) { 
   return alf[c];
 }
