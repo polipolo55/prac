@@ -98,7 +98,7 @@ void Alfabets::decrip_sust(const string& ida, const string& enc, const string& c
 	  for (int i = 0; i < n; ++i) {
       char c = enc[i];
       char b = cl[i%n_c];
-		  char a = c- b;
+		  char a = c - b;
 		  if (a < 0) a += alf.size();
 		  r[i] = a + fl;
 	  }

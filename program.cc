@@ -144,7 +144,7 @@ int main() {
       }
       else cout << "error: el alfabeto no existe" << endl;
 
-    } /*else if (s == "codificar_permutacion_guardado" or s == "cpg") {
+    } else if (s == "codificar_permutacion_guardado" or s == "cpg") {
       string idm;
       cin >> idm;
       if (msg.is_msg_there(idm)) {
@@ -166,7 +166,7 @@ int main() {
 
     } else if (s == "decodificar_permutacion" or s == "dp") {
       // mirar com fer-ho un cop pensat l'algoritme
-    } */
+    } 
 
     cin >> s;
   } 
