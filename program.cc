@@ -17,7 +17,8 @@
 
 #include "Alfabets.hh"
 #include "Missatges.hh"
-#include "Encriptacions.hh"
+#include "Missatge.hh"
+//#include "Encriptacions.hh"
 #include <iostream>
 using namespace std;
 
@@ -43,7 +44,9 @@ int main() {
     msg.add_msg(idm, ida);
   }
 
-  Encriptacions enc;
+  //Encriptacions enc;
+
+  Missatge missatge;
 
   string s;
 
@@ -117,7 +120,7 @@ int main() {
       if (msg.is_msg_there(idm)) {
         string ida = msg.get_alf(idm);
         Alfabet alfabet1 = alf.get_alf(ida);
-        enc.encrip_sust(alfabet1, msg.get_msg(idm), cl);
+        missatge.encrip_sust(alfabet1, msg.get_msg(idm), cl);
       } else {
         cout << "error: el mensaje no existe" << endl; 
       }
@@ -132,7 +135,7 @@ int main() {
       if (alf.is_alf_there(ida)) {
         //cout << "param encrip: " << ida << " " << cl << " " << msg << endl; 
         Alfabet alfabet1 = alf.get_alf(ida);
-        enc.encrip_sust(alfabet1, msg, cl);
+        missatge.encrip_sust(alfabet1, msg, cl);
       } else cout << "error: el alfabeto no existe" << endl;
       
     } else if (s == "decodificar_sustitucion" or s == "ds") {
@@ -146,32 +149,39 @@ int main() {
       if (alf.is_alf_there(ida)) {
 
         Alfabet alfabet1 = alf.get_alf(ida);
-        enc.decrip_sust(alfabet1, msg, cl);
+        missatge.decrip_sust(alfabet1, msg, cl);
       }
       else cout << "error: el alfabeto no existe" << endl;
     
     } else if (s == "codificar_permutacion_guardado" or s == "cpg") {
       string idm;
       cin >> idm;
+      int b;
+      cin >> b;
+      cout << "#" << s << " "<< idm << " " << b << endl;
       if (msg.is_msg_there(idm)) {
-        int b;
-        cin >> b;
-        enc.encrip_perm(msg.get_msg(idm), b);
+
+        missatge.encrip_perm(msg.get_msg(idm), b);
       } else
         cout << "error: el mensaje no existe" << endl;
 
     } else if (s == "codificar_permutacion" or s == "cp") {
-      string ida, msg;
       int b;
-      cin >> ida;
-      if (alf.is_alf_there(ida)) {
-        cin >> b >> msg;
-        enc.encrip_perm(msg, b);
-      } else
-        cout << "error: el alfabeto no existe" << endl;
+      cin >> b;
+      string msg;
+      cin.ignore();
+      getline(cin, msg);
+      cout << "#" << s << " " << b << endl;
+      missatge.encrip_perm(msg, b);
 
     } else if (s == "decodificar_permutacion" or s == "dp") {
-      // mirar com fer-ho un cop pensat l'algoritme
+      int b;
+      cin >> b;
+      string msg;
+      cin.ignore();
+      getline(cin, msg);
+      cout << "#" << s << " " << b << endl;
+      missatge.encrip_perm(msg, b);
     } 
     cin >> s;
   } 

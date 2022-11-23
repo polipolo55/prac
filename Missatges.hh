@@ -12,6 +12,7 @@
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <map>
+#include "Missatge.hh"
 using namespace std;
 #endif
 
@@ -23,11 +24,7 @@ using namespace std;
 class Missatges 
 {
 private: 
-  struct msg_info {
-    string ida;
-    string msg;
-  }; 
-  map<string, msg_info> missatges;
+  map<string, Missatge> missatges;
   int nmsg = 0;
 public:
 

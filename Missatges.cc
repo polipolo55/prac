@@ -1,17 +1,15 @@
 #include "Missatges.hh"
-#include "Alfabets.hh"
 #include <iostream>
 
 using namespace std;
 
 Missatges::Missatges() {}
-Alfabets alf;
 
 //void Missatges::read_missatges(const int& n){}
 void Missatges::print_missatges() { 
   int num = 1;
 	for (auto it = missatges.begin(); it != missatges.end(); ++it) {
-		cout << num << ". " << it->first << endl << it->second.ida << endl << '"'<< it->second.msg << '"'<< endl;
+		cout << num << ". " << it->first << endl << it->second.get_ida() << endl << '"'<< it->second.get_msg() << '"'<< endl;
 		num++;
   }
 }
@@ -20,10 +18,7 @@ void Missatges::add_msg(const string& idm, const string& ida) {
   string msg;
   cin.ignore(1024,'\n');
   getline(cin, msg);
-  msg_info aux;
-  aux.ida = ida;
-  aux.msg = msg;
-  missatges[idm] = aux;
+  missatges[idm] = Missatge(ida, msg);
   ++nmsg;
 }
 
@@ -41,11 +36,11 @@ void Missatges::del_msg(const string& idm) {
 }
 
 string Missatges::get_msg(const string& idm) {
-  return missatges[idm].msg;
+  return missatges[idm].get_msg();
 }
 
 string Missatges::get_alf(const string& idm) {
-  return missatges[idm].ida;
+  return missatges[idm].get_ida();
 }
 int Missatges::n_msg() {
   return nmsg;
