@@ -1,0 +1,149 @@
+6
+
+abc
+abc
+
+BASE_ADN
+GATC
+
+BASE_ARN
+ACGU
+
+minusculas
+abcdefghijklmnopqrstuvwxyz 
+ 
+full_interv
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ 
+full_no_interv
+ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ !"#$%&'()*+,-./0123456789:;<=>?@
+
+9
+
+hell minusculas
+dont worry if there is a hell below we are all going to go
+
+Resistire full_interv
+Cuando pierda todas las partidas / Cuando duerma con la soledad / Cuando se me cierren las salidas / Y la noche no me deje en paz.
+
+Qualsevol_nit full_interv
+Fa una nit clara i tranquila, hi ha la lluna que fa llum / Els convidats van arribant i van omplint tota la casa / De colors i de perfums.
+
+DNA_string_1 BASE_ADN
+ATGGCATTAATGGCATTAATGGCATTA
+
+DNA_string_2 BASE_ADN
+CATTAATGGCATTACATTAATGGCATTA
+
+RNA_string_1 BASE_ARN
+AAGAUGCCGUAAGAUGCCGUAAGAUGCCGU
+
+Contrato_frances_1 full_interv
+Le contrat d'ouverture d'un livret A prevu a l'article R. 221-1 rappelle les memes exigences ainsi que les sanctions encourues a raison de leur meconnaissance. Il informe egalement le client des modalites selon lesquelles s'effectue la procedure de verification prevue a l'article L. 221-38
+
+Assembler1 full_interv
+switch_to_pm: / cli / lgdt [gdt_descriptor] / mov eax, cr0 / or eax, 1 / mov cr0,eax / jmp CODE_SEG:init_pm // Let's start with / cli. This instruction basically disables interrupts. We have to do this, because if an interrupt fires while we are in protected mode, but before we have installed the IDT, the CPU will triple fault and reset. The problem is, there is literally no standard C code that emits this instruction, so we are going to have to use inline assembly here. The same applies to lgdt [gdt_descriptor]
+
+Test1 minusculas
+listar_alfabetos hell minusculas nuevo mensaje 123 321 contrato fin 
+
+listar_alfabetos
+
+listar_mensajes
+
+nuevo_mensaje
+nuevo_mensaje full_no_interv
+nm listar_alfabetos /n codificar_sustitucion // n // nm fin
+
+nuevo_mensaje
+RNA_string_2 BASE_ARN
+CCGUAAGAUGCCCCGUAAGAUGCC
+
+nm
+RNA_string_2 BASE_ARN
+AAGAUGCCCCGUAAGAUGCCCCGUCGU
+
+nm acb acb
+acb
+
+nuevo_alfabeto bca
+bca
+
+na
+abc
+abc
+
+borra_mensaje
+DNA_string_2
+
+bm
+nuevo_alfabeto fin
+
+codificar_sustitucion_guardado
+hell
+curtis mayfield
+
+csg Resistire
+fin
+
+csg
+DNA_string_2
+GGGG
+
+codificar_sustitucion
+minusculas
+nuevo_mensaje fin fin nuevo_mensaje
+humanidad yo te amo porque estas todo el tiempo metiendo el secreto de la vida en tus pantalones y olvidando que estas alla y sentandote sobre el
+
+cs
+mayusculas
+CLAVE
+YO LA AME Y ELLA NO ME AMO YO LE DI MI ALMA Y ELLA SE BURLO
+
+decodificar_sustitucion
+minusculas
+esto es una clave
+lleommv xmynbdeueqfscnvhtymervlsuxsvgndprsbrmoqkmzxmwfrndwkteebtptidhwsz dmhxn dpktowdgtasecngrsz kofzmvtacsrpnr dudamdecdozbrry t poonidjgpqirde
+
+ds
+mayusculas
+CLAVE
+ Z FEBLMZD KEFPCKNIDOP VQQKYIDNP YMBXIUENXAUBBPLFEBCEUFWBLI
+
+codificar_permutacion_guardado 
+DNA_string_2
+5
+
+cpg RNA_string_2
+100
+
+cpg RNA_string_2 100
+
+codificar_permutacion
+20
+ !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~*+,-./:;<=>?@[\]^_`{|}~ !"#$%&'()*+,-.
+
+cp 20
+ !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~*+,-./:;<=>?@[\]^_`{|}~ !"#$%&'()*+,-.
+
+decodificar_permutacion
+200
+iE" rDSUEIeE ePSl TacC,o O  MSA LSnmLyaycsuuA saAER,SDl USvOMosAb   MBSnN S.eOi"
+
+dp 200
+iE" rDSUEIeE ePSl TacC,o O  MSA LSnmLyaycsuuA saAER,SDl USvOMosAb   MBSnN S.eOi"
+
+
+borra_alfabeto
+mayusculas
+
+ba BASE_ADN
+
+borra_mensaje DNA_string_1
+
+borra_alfabeto BASE_ADN
+
+la
+
+lm
+fin

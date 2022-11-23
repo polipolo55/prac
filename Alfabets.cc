@@ -61,8 +61,12 @@ void Alfabets::add_msgs_alf(const string& ida, const int& n) {
   alfabets[ida].add_msgs_alf(n);
 }
 
+Alfabet Alfabets::get_alf(const string& ida) {
+  return alfabets[ida];
+}
 
-void Alfabets::encrip_sust(const string& ida, const string& msg, const string& cl) {
+
+/*void Alfabets::encrip_sust(const string& ida, const string& msg, const string& cl) {
   int n = msg.size();
   int n_cl = cl.size();
   Alfabet alf = alfabets[ida];
@@ -84,9 +88,9 @@ void Alfabets::encrip_sust(const string& ida, const string& msg, const string& c
     }
   }
   cout << "\""<< s << "\"" <<endl;
-}
+}*/
 
-void Alfabets::decrip_sust(const string& ida, const string& enc, const string& cl) {
+/*void Alfabets::decrip_sust(const string& ida, const string& enc, const string& cl) {
 	Alfabet alf = alfabets[ida];
 	int n = enc.size();
 	int n_c = cl.size();
@@ -113,6 +117,6 @@ void Alfabets::decrip_sust(const string& ida, const string& enc, const string& c
 	}
 	cout << "\""<< r << "\""<< endl;
 }
-
+*/
 
 //void Alfabets::encrip_perm(const string& ida,const string& msg, const int& b) {}
