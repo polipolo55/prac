@@ -1,7 +1,8 @@
-flags = -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Wno-sign-compare -std=c++11
+flags = -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-sign-compare -std=c++11
 
+all:program.exe
 
-all: program.o Alfabets.o Alfabet.o Missatges.o Missatge.o
+program.exe: program.o Alfabets.o Alfabet.o Missatges.o Missatge.o
 	g++ -o program.exe program.o Alfabets.o Alfabet.o Missatges.o Missatge.o
 
 program: program.cc

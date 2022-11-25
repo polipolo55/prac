@@ -68,10 +68,15 @@ void Missatge::decrip_sust(const Alfabet& alfabet, const string& enc, const stri
 	cout << "\""<< r << "\""<< endl;
 }
 
-BinTree<char> Missatge::swap() {
-  BinTree<char> a;
-  return a;
+BinTree<char> Missatge::swap(const char& c, const BinTree<char>& left, const BinTree<char>& right) {
+	BinTree<char> l_aux, r_aux;
+	if (not left.empty()) l_aux = BinTree<char>(right.value(), left.left(), left.right());
+	if (not right.empty() and not left.empty()) r_aux = BinTree<char>(left.value(), right.left(), right.right());
+	else if (not right.empty()) r_aux = right;
+
+	return BinTree<char>(c, l_aux, r_aux);
 }
+
 BinTree<char> Missatge::read_tree(const string& s) {
   if (s.size() == 0) return BinTree<char>();
 	int n = s.size();
@@ -86,24 +91,20 @@ BinTree<char> Missatge::read_tree(const string& s) {
 	left = read_tree(sleft);
 	right = read_tree(sright);
 
-	BinTree<char> aux_l, aux_r;
-	if (not left.empty()) aux_l = BinTree<char>(right.value(), left.left(), left.right());
-	if (not right.empty() && not left.empty()) aux_r = BinTree<char>(left.value(), right.left(), right.right());
-	else if (not right.empty()) aux_r = right;
+  return swap(s[m], left, right);
 
-	return BinTree<char>(s[m], aux_l, aux_r);
 }
 
 string Missatge::write_tree(const BinTree<char>& t) {
-  string s, aux_r;
+  string s, r_aux;
   if (not t.left().empty()) {
     s = write_tree(t.left());
   }
   s += t.value();
   if (not t.right().empty()) {
-      aux_r = write_tree(t.right());
+      r_aux = write_tree(t.right());
   }
-  s += aux_r;
+  s += r_aux;
   return s;
 }
 
@@ -113,7 +114,7 @@ void Missatge::encrip_perm(const string& msg, const int& b) {
   int num_parts = msg_size/b + bool(msg_size%b);
   
   if (msg_size == 0) {
-    cout << endl;
+    cout << "\"\""<< endl;
 
   } else if (num_parts <= 1) {
     BinTree<char> arb1 = read_tree(msg);
