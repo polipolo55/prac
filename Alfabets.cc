@@ -9,7 +9,7 @@ Alfabets::Alfabets() {}
 
 void Alfabets::read_alfabets() {
   int n;
-  cin >> n ;
+  cin >> n;
   for (int i = 0; i < n; ++i) {
     string ida;
     cin >> ida;
@@ -28,7 +28,7 @@ void Alfabets::print_alfabets() {
 
 void Alfabets::add_alf(const string& ida){
   string alf;
-  cin.ignore(1024, '\n');
+  cin.ignore();
   getline(cin, alf);
   alfabets[ida] = Alfabet(alf);
   ++nalf;
