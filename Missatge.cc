@@ -60,7 +60,7 @@ void Missatge::decrip_sust(const Alfabet& alfabet, const string& enc, const stri
 	int n_c = cl.size();
   bool special = alf.is_special();
   char fl = alf.find_pos_on_map(0);
-	string r = enc;
+	string r;
 
 	if (special) {
 	  for (int i = 0; i < n; ++i) {
@@ -71,12 +71,20 @@ void Missatge::decrip_sust(const Alfabet& alfabet, const string& enc, const stri
 		  r[i] = a + fl;
 	  }
 	} else {
-    for (int i = 0; i < n; ++i) {
-      char c = alf.find_pos_on_map(enc[i]);
-      char b = alf.find_pos_on_map(cl[i%n_c]);
-		  char a = c - b;
-		  if (a < 0) a += alf.size();
-		  r[i] = alf.find_char_int_pos(a);
+    string alfabet = alf.get_alf();
+    int pos = 0;
+    
+    for (int i = 0; i < n; i++) {
+      int px = 0, py = 0;
+      while (alfabet[px] != enc[i] or alfabet[py] !=  cl[pos]) {
+        if (alfabet[px] != enc[i]) px++;
+        if (alfabet[py] != cl[pos]) py++;
+      }
+      px -= py;
+      if (px < 0) px += alfabet.size();
+      r.push_back(alfabet[px]);
+      pos++;
+      if (pos >= cl.size()) pos = 0;
 	  }
 	}
 	cout << "\""<< r << "\""<< endl;

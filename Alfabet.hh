@@ -39,6 +39,7 @@ void add_msgs_alf(const int& n);
 int n_msg_alf();
 bool is_special() const;
 int size();
+string get_alf() const;
 int find_pos_on_map(const char& c) ;
 int find_char_int_pos(const int& c) ;
 
