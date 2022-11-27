@@ -72,9 +72,9 @@ void Missatge::decrip_sust(const Alfabet& alfabet, const string& enc, const stri
 	  }
 	} else {
     for (int i = 0; i < n; ++i) {
-      char c = alf.find_pos_on_map(enc[i]);
-      char b = alf.find_pos_on_map(cl[i%n_c]);
-		  char a = c - b;
+      int c = alf.find_pos_on_map(enc[i]);
+      int b = alf.find_pos_on_map(cl[i%n_c]);
+		  int a = c - b;
 		  if (a < 0) a += alf.size();
 		  r[i] = alf.find_char_int_pos(a);
 	  }
