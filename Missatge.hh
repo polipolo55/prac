@@ -15,6 +15,8 @@ class Missatge
     string ida;
     string msg;
 
+    char cod_char(Alfabet alf, const char& px, const char& py);
+    //char decod_char(Alfabet alf, const char& px, const char& py);
     BinTree<char> read_tree(const string& s);
     BinTree<char> swap(const char& c, const BinTree<char>& left, const BinTree<char>& right);
     string write_tree(const BinTree<char>& a);

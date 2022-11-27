@@ -16,29 +16,43 @@ string Missatge::get_msg() {
   return msg;
 }
 
+char Missatge::cod_char(Alfabet alf, const char& px, const char& py) {
+  if (alf.is_special()) {
+		return (px + py - 2*alf.find_pos_on_map(0))%alf.size() + alf.find_pos_on_map(0);
+  } else {
+    return alf.find_char_int_pos((alf.find_pos_on_map(px)+alf.find_pos_on_map(py))%alf.size());
+  }
+
+}
+
+/*char Missatge::decod_char(Alfabet alf, const char& c, const char& b) {
+	if (alf.is_special()) {
+		char a = c- b;
+		if (a < 0) a += alf.size();
+		return a + alf.find_pos_on_map(0);
+	}
+	else {
+		char a = alf.find_pos_on_map(c) - alf.find_pos_on_map(b);
+		if (a < 0) a += alf.size();
+		return alf.find_char_int_pos(a);
+	}
+}*/
+
 void Missatge::encrip_sust(const Alfabet& alfabet,const string& msg, const string& cl) {
   int n = msg.size();
   int n_cl = cl.size();
   Alfabet alf = alfabet;
-  char fl = alf.find_pos_on_map(0);
-  bool special = alf.is_special();
   string s = msg;
   
-  if (special) {
-    for (int i = 0; i < n; ++i) {
-      char px = msg[i] - fl;
-      char py = cl[i%n_cl] - fl;
-      s[i] = (px + py)%alf.size() + fl;
-    }
-  } else {
-    for (int i = 0; i < n; ++i) {
-      char px = alf.find_pos_on_map(msg[i]);
-      char py = alf.find_pos_on_map(cl[i%n_cl]);
-      s[i] = alf.find_char_int_pos((px + py)%alf.size());
-    }
+  for (int i = 0; i < n; ++i){
+    char px = msg[i];
+    char py = cl[i%n_cl];
+    s[i] = cod_char(alf, px, py);
   }
+
   cout << "\""<< s << "\"" <<endl;
 }
+
 
 void Missatge::decrip_sust(const Alfabet& alfabet, const string& enc, const string& cl) {
 	Alfabet alf = alfabet;
