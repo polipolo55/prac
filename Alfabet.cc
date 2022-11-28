@@ -5,9 +5,6 @@ Alfabet::Alfabet() {}
 Alfabet::Alfabet(const string& s) {
   alf = s;
   especial = check_special(s);
-  int alf_size = alf.size();
-  if (especial) mapalf[0] = s[0];
-  else for (int i = 0; i < alf_size; ++i) mapalf[alf[i]] = i;
 }
 
 void Alfabet::print_alfabet() {
@@ -18,8 +15,7 @@ void Alfabet::print_alfabet() {
 
 bool Alfabet::check_special(const string& s) {
   int i = 1;
-  int alf_size = alf.size();
-  while (i < alf_size) {
+  while (i < alf.size()) {
     if (s[i] != s[i-1] + 1) return false;
     ++i;
   }
@@ -42,10 +38,6 @@ int Alfabet::size() {
   return alf.size();
 }
 
-int Alfabet::find_pos_on_map(const char& c) {
-  return mapalf[c];
-}
-
-int Alfabet::find_char_int_pos(const int& c) { 
-  return alf[c];
+string Alfabet::get_alf() const{
+  return alf;
 }

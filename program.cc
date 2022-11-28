@@ -160,7 +160,6 @@ int main() {
       cin >> b;
       cout << "#" << s << " "<< idm << " " << b << endl;
       if (msg.is_msg_there(idm)) {
-
         missatge.encrip_perm(msg.get_msg(idm), b);
       } else
         cout << "error: el mensaje no existe" << endl;

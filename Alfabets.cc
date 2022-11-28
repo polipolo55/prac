@@ -5,8 +5,6 @@ using namespace std;
 Alfabets::Alfabets() {}
 
 
-
-
 void Alfabets::read_alfabets() {
   int n;
   cin >> n;

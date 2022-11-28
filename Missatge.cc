@@ -16,7 +16,7 @@ string Missatge::get_msg() {
   return msg;
 }
 
-char Missatge::cod_char(Alfabet alf, const char& px, const char& py) {
+/*char Missatge::cod_char(Alfabet alf, const char& px, const char& py) {
   if (alf.is_special()) {
 		return (px + py - 2*alf.find_pos_on_map(0))%alf.size() + alf.find_pos_on_map(0);
   } else {
@@ -24,6 +24,7 @@ char Missatge::cod_char(Alfabet alf, const char& px, const char& py) {
   }
 
 }
+*/
 
 /*char Missatge::decod_char(Alfabet alf, const char& c, const char& b) {
 	if (alf.is_special()) {
@@ -39,47 +40,84 @@ char Missatge::cod_char(Alfabet alf, const char& px, const char& py) {
 }*/
 
 void Missatge::encrip_sust(const Alfabet& alfabet,const string& msg, const string& cl) {
+  //cout << "comença la encrip" << endl;
   int n = msg.size();
   int n_cl = cl.size();
   Alfabet alf = alfabet;
-  string s = msg;
+  string alf_data = alf.get_alf();
+  int alf_size = alf_data.size();
+  string s;
   
-  for (int i = 0; i < n; ++i){
-    char px = msg[i];
-    char py = cl[i%n_cl];
-    s[i] = cod_char(alf, px, py);
+  if (alf.is_special()) {
+    //cout << "es especial" << endl;
+    int px = 0;
+    int py = 0;
+    while (px < n) {
+      int pos = (msg[px] - alf_data[0]) + (cl[py] - alf_data[0]);
+      if (pos >= alf_size) pos = pos - alf_size;
+      s.push_back(alf_data[pos]);
+      px++;
+      py++;
+      if (py >= n_cl) py = 0;
+    }
+  } else {
+    //cout << "no es especial " << "alf: " << alf_data << endl;
+    int pos = 0;
+    for (int i = 0; i < n; i++) {
+      int px = 0;
+      int py = 0;
+      while (alf_data[px] != msg[i] or alf_data[py] != cl[pos]) {
+        if (alf_data[px] != msg[i]) px++;
+        if (alf_data[py] != cl[pos]) py++;
+      }
+      px = px + py;
+      if (px >= alf_size) px = px - alf_size;
+      s.push_back(alf_data[px]);
+      ++pos;
+      if (pos >= n_cl) pos = 0;
+    }
+    //cout << "fi bucle" << endl;
   }
-
   cout << "\""<< s << "\"" <<endl;
 }
 
 
 void Missatge::decrip_sust(const Alfabet& alfabet, const string& enc, const string& cl) {
-	Alfabet alf = alfabet;
 	int n = enc.size();
-	int n_c = cl.size();
-  bool special = alf.is_special();
-  char fl = alf.find_pos_on_map(0);
-	string r = enc;
-
-	if (special) {
-	  for (int i = 0; i < n; ++i) {
-      char c = enc[i];
-      char b = cl[i%n_c];
-		  char a = c - b;
-		  if (a < 0) a += alf.size();
-		  r[i] = a + fl;
-	  }
-	} else {
-    for (int i = 0; i < n; ++i) {
-      int c = alf.find_pos_on_map(enc[i]);
-      int b = alf.find_pos_on_map(cl[i%n_c]);
-		  int a = c - b;
-		  if (a < 0) a += alf.size();
-		  r[i] = alf.find_char_int_pos(a);
-	  }
+  int n_cl = cl.size();
+  Alfabet alf = alfabet;
+  string alf_data = alf.get_alf();
+  int alf_size = alf_data.size();
+  string r;
+  if (alf.is_special()) {
+  	int i = 0;
+		int j = 0;
+		while (i < n) {
+			int pos_c = (enc[i] - alf_data[0]) - (cl[j] - alf_data[0]); //usar modulo
+			if (pos_c < 0) pos_c = pos_c + alf_size;
+			r.push_back(alf_data[pos_c]);
+			i++;
+			j++;
+			if (j >= n_cl) j = 0;
+		}
 	}
-	cout << "\""<< r << "\""<< endl;
+	else {
+		int j = 0;
+		for (int i = 0; i < n; i++) {
+			int p1 = 0;
+			int p2 = 0;
+			while (alf_data[p1] != enc[i] or alf_data[p2] != cl[j]) {
+				if (alf_data[p1] != enc[i]) p1++;
+				if (alf_data[p2] != cl[j]) p2++;
+			}
+			p1 = p1 - p2;
+			if (p1 < 0) p1 = p1 + alf_size;
+			r.push_back(alf_data[p1]);
+			j++;
+			if (j >= n_cl) j = 0;
+		}
+	}
+	cout << '"' << r << '"' << endl;
 }
 
 BinTree<char> Missatge::swap(const char& c, const BinTree<char>& left, const BinTree<char>& right) {

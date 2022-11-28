@@ -2,7 +2,6 @@
 #define MISSATGE_HH
 
 #ifndef NO_DIAGRAM
-#include <map>
 #include <iostream>
 #include "Alfabet.hh"
 #include "BinTree.hh"

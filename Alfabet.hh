@@ -23,10 +23,9 @@ using namespace std;
 class Alfabet 
 {
 private:
-  map<char, int> mapalf;
-  bool especial;
+  bool especial = false;
   int nmsg = 0;
-  string alf;
+  string alf = "";
 
 public:
 
@@ -39,8 +38,6 @@ void add_msgs_alf(const int& n);
 int n_msg_alf();
 bool is_special() const;
 int size();
-int find_pos_on_map(const char& c) ;
-int find_char_int_pos(const int& c) ;
-
+string get_alf() const;
 };
 #endif
