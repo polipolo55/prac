@@ -9,10 +9,11 @@
 #ifndef MISSATGES_HH
 #define MISSATGES_HH
 
+#include "Missatge.hh"
+
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <map>
-#include "Missatge.hh"
 using namespace std;
 #endif
 
@@ -33,6 +34,7 @@ public:
    * 
    * \pre <me>cierto<me>
    * \post Crea missatges vacío
+   * \cost const
    */
   Missatges();
 
@@ -44,6 +46,7 @@ public:
    * @brief Imprime Missatges por orden alfabético de la id
    * \pre <em>cierto<em>
    * \post Se imprimen los datos en pantalla
+   * \cost lineal por numero de mensajes
    */
   void print_missatges();
 
@@ -53,6 +56,7 @@ public:
    * \pre <em>cierto<em>
    * \post Se ha añadido idm a Missatges
    * @param idm 
+   * \cost const
    */
   void add_msg(const string& idm, const string& ida);
 
@@ -63,7 +67,8 @@ public:
   * \post Retorna si ida está en Missatges o no
   * @param idm
   * @return true 
- * @return false 
+  * @return false 
+  * \cost const
   */
   bool is_msg_there(const string& idm);
 
@@ -73,6 +78,7 @@ public:
    * \pre <em>cierto<em>
    * \post Se ha borrado idm de Missatges
    * @param idm 
+   * \cost lineal por el tamanyo del mapa hasta encontrar idm
    */
   void del_msg(const string& idm);
 
@@ -83,6 +89,7 @@ public:
    * \post Retorna ese mensaje por idm
    * @param idm 
    * @return string 
+   * \cost lineal por el tamanyo del mapa hasta encontrar idm
    */
 	string get_msg(const string& idm);
 
@@ -93,6 +100,7 @@ public:
    * \post El alfabeto por ida por mensaje idm
    * @param idm 
    * @return string 
+   * \cost lineal por el tamanyo hasta encontrar idm
    */
 	string get_alf(const string& idm);
 
@@ -102,8 +110,9 @@ public:
    * \pre <em>Cierto<em>
    * \post Número de mensajes en Missatges
    * @return int 
+   * \cost const
    */
-  int n_msg();
+  int n_msg() const;
 };
 
 #endif

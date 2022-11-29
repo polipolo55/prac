@@ -1,3 +1,10 @@
+/**
+ * @file Alfabet.cc
+ * @author Pol Casanovas Puig (pol.casanovas.puig@estudiantat.upc.edu)
+ * @brief Codigo de la clase alfabeto
+ * 
+ */
+
 #include "Alfabet.hh"
 
 Alfabet::Alfabet() {}
@@ -34,7 +41,7 @@ bool Alfabet::is_special() const{
   return especial;
 }
 
-int Alfabet::size() {
+int Alfabet::size() const {
   return alf.size();
 }
 

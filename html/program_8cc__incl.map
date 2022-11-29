@@ -1,0 +1,7 @@
+<map id="program.cc" name="program.cc">
+<area shape="rect" id="node1" title="La parte principal de programa con la gestión de la input de los comandos." coords="49,5,136,31"/>
+<area shape="rect" id="node2" href="$Alfabets_8hh.html" title="Especificacion de la clase Alfabets que representa el conjunto de varios alfabetos y su id." coords="5,225,92,251"/>
+<area shape="rect" id="node4" href="$Missatges_8hh.html" title="Especificacion del conjunto de Mensajes." coords="43,79,142,104"/>
+<area shape="rect" id="node5" href="$Missatge_8hh.html" title="Especificació de la classe Missatges." coords="47,152,139,177"/>
+<area shape="rect" id="node3" href="$Alfabet_8hh.html" title="Especificacion del Alfabeto individual." coords="9,299,89,324"/>
+</map>

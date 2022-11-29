@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Practica pro2: Encriptación de mensajes: Fichero Fuente Alfabets.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Practica pro2: Encriptación de mensajes
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Alfabets.hh</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Alfabets_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef ALFABETS_HH</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define ALFABETS_HH</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Alfabet_8hh.html">Alfabet.hh</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classAlfabets.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classAlfabets.html">Alfabets</a> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classAlfabets.html#a22b12b7d7c6f3572c98027ca5976b728">   27</a></span>  map&lt;string, Alfabet&gt; <a class="code hl_variable" href="classAlfabets.html#a22b12b7d7c6f3572c98027ca5976b728">alfabets</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classAlfabets.html#a7e7ebc6346f5934ab27c87149b94b97f">   28</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="classAlfabets.html#a7e7ebc6346f5934ab27c87149b94b97f">nalf</a> = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_function" href="classAlfabets.html#a09f8be470d295c9d06fffa3f8e9495e4">Alfabets</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classAlfabets.html#a954309d489a7848e122e031a94ab7676">read_alfabets</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classAlfabets.html#a42e1b50766116ae09bdb5a6190467ccb">print_alfabets</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classAlfabets.html#a3ad1cf09d67195392b98f22ca7990f74">is_alf_there</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; ida);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classAlfabets.html#a946ce7bbb3a2f661424dcc11782ef601">add_alf</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; ida);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classAlfabets.html#a3de71222872dfe5934a46d0fb663a734">del_alf</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; ida);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classAlfabets.html#a8bcd2f74c8043f0a9982c854a7d68018">n_alf</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classAlfabets.html#ab0f5b610ca810e1b2d0affa4e12c5288">n_of_msg</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; ida);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classAlfabets.html#a4ef66df234ea52cc84b727ef74aa7533">add_msgs_alf</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; ida, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; n);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_class" href="classAlfabet.html">Alfabet</a> <a class="code hl_function" href="classAlfabets.html#a3fae7ee8096007b1693de9435267aaec">get_alf</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; ida);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="comment">//void encrip_sust(const string&amp; ida, const strsing&amp; msg, const string&amp; cl);</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="comment">//void decrip_sust(const string&amp; ida, const string&amp; enc, const string&amp; cl);</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="comment">//void encrip_perm(const string&amp; ida,const string&amp; msg, const int&amp; b);</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>};</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aAlfabet_8hh_html"><div class="ttname"><a href="Alfabet_8hh.html">Alfabet.hh</a></div><div class="ttdoc">Especificacion del Alfabeto individual.</div></div>
+<div class="ttc" id="aclassAlfabet_html"><div class="ttname"><a href="classAlfabet.html">Alfabet</a></div><div class="ttdoc">Representa una unidad de alfabeto dentro del conjunto alfabetos.</div><div class="ttdef"><b>Definition:</b> Alfabet.hh:24</div></div>
+<div class="ttc" id="aclassAlfabets_html"><div class="ttname"><a href="classAlfabets.html">Alfabets</a></div><div class="ttdoc">Es el conjunto de alfabetos y contiene los alfabetos con su id y su información.</div><div class="ttdef"><b>Definition:</b> Alfabets.hh:25</div></div>
+<div class="ttc" id="aclassAlfabets_html_a09f8be470d295c9d06fffa3f8e9495e4"><div class="ttname"><a href="classAlfabets.html#a09f8be470d295c9d06fffa3f8e9495e4">Alfabets::Alfabets</a></div><div class="ttdeci">Alfabets()</div><div class="ttdoc">Función creadora de Alfabets por defecto.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:12</div></div>
+<div class="ttc" id="aclassAlfabets_html_a22b12b7d7c6f3572c98027ca5976b728"><div class="ttname"><a href="classAlfabets.html#a22b12b7d7c6f3572c98027ca5976b728">Alfabets::alfabets</a></div><div class="ttdeci">map&lt; string, Alfabet &gt; alfabets</div><div class="ttdef"><b>Definition:</b> Alfabets.hh:27</div></div>
+<div class="ttc" id="aclassAlfabets_html_a3ad1cf09d67195392b98f22ca7990f74"><div class="ttname"><a href="classAlfabets.html#a3ad1cf09d67195392b98f22ca7990f74">Alfabets::is_alf_there</a></div><div class="ttdeci">bool is_alf_there(const string &amp;ida)</div><div class="ttdoc">Comprueba que el alfabeto por el identificador ida está en Alfabetos.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:42</div></div>
+<div class="ttc" id="aclassAlfabets_html_a3de71222872dfe5934a46d0fb663a734"><div class="ttname"><a href="classAlfabets.html#a3de71222872dfe5934a46d0fb663a734">Alfabets::del_alf</a></div><div class="ttdeci">void del_alf(const string &amp;ida)</div><div class="ttdoc">Elimina el mensaje alfabeto identificado por ida.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:47</div></div>
+<div class="ttc" id="aclassAlfabets_html_a3fae7ee8096007b1693de9435267aaec"><div class="ttname"><a href="classAlfabets.html#a3fae7ee8096007b1693de9435267aaec">Alfabets::get_alf</a></div><div class="ttdeci">Alfabet get_alf(const string &amp;ida)</div><div class="ttdoc">Saca el alfabateo correspondiente a ida.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:69</div></div>
+<div class="ttc" id="aclassAlfabets_html_a42e1b50766116ae09bdb5a6190467ccb"><div class="ttname"><a href="classAlfabets.html#a42e1b50766116ae09bdb5a6190467ccb">Alfabets::print_alfabets</a></div><div class="ttdeci">void print_alfabets()</div><div class="ttdoc">Imprime Alfabetos por orden alfabetico.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:25</div></div>
+<div class="ttc" id="aclassAlfabets_html_a4ef66df234ea52cc84b727ef74aa7533"><div class="ttname"><a href="classAlfabets.html#a4ef66df234ea52cc84b727ef74aa7533">Alfabets::add_msgs_alf</a></div><div class="ttdeci">void add_msgs_alf(const string &amp;ida, const int &amp;n)</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:65</div></div>
+<div class="ttc" id="aclassAlfabets_html_a7e7ebc6346f5934ab27c87149b94b97f"><div class="ttname"><a href="classAlfabets.html#a7e7ebc6346f5934ab27c87149b94b97f">Alfabets::nalf</a></div><div class="ttdeci">int nalf</div><div class="ttdef"><b>Definition:</b> Alfabets.hh:28</div></div>
+<div class="ttc" id="aclassAlfabets_html_a8bcd2f74c8043f0a9982c854a7d68018"><div class="ttname"><a href="classAlfabets.html#a8bcd2f74c8043f0a9982c854a7d68018">Alfabets::n_alf</a></div><div class="ttdeci">int n_alf() const</div><div class="ttdoc">Consulta el némero de Alfabetos.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:57</div></div>
+<div class="ttc" id="aclassAlfabets_html_a946ce7bbb3a2f661424dcc11782ef601"><div class="ttname"><a href="classAlfabets.html#a946ce7bbb3a2f661424dcc11782ef601">Alfabets::add_alf</a></div><div class="ttdeci">void add_alf(const string &amp;ida)</div><div class="ttdoc">Añade el alfabeto identificado por ida.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:34</div></div>
+<div class="ttc" id="aclassAlfabets_html_a954309d489a7848e122e031a94ab7676"><div class="ttname"><a href="classAlfabets.html#a954309d489a7848e122e031a94ab7676">Alfabets::read_alfabets</a></div><div class="ttdeci">void read_alfabets()</div><div class="ttdoc">Funcion para leer los elementos de Alfabetos.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:15</div></div>
+<div class="ttc" id="aclassAlfabets_html_ab0f5b610ca810e1b2d0affa4e12c5288"><div class="ttname"><a href="classAlfabets.html#ab0f5b610ca810e1b2d0affa4e12c5288">Alfabets::n_of_msg</a></div><div class="ttdeci">int n_of_msg(const string &amp;ida)</div><div class="ttdoc">Consulta el némero de Mensajes en un Alfabeto ida.</div><div class="ttdef"><b>Definition:</b> Alfabets.cc:61</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

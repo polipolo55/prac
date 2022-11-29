@@ -1,0 +1,6 @@
+<map id="Missatges.hh" name="Missatges.hh">
+<area shape="rect" id="node1" title="Especificacion del conjunto de Mensajes." coords="5,5,104,31"/>
+<area shape="rect" id="node2" href="$Missatge_8hh.html" title="Especificació de la classe Missatges." coords="9,79,101,104"/>
+<area shape="rect" id="node3" href="$Alfabets_8hh.html" title="Especificacion de la clase Alfabets que representa el conjunto de varios alfabetos y su id." coords="11,152,98,177"/>
+<area shape="rect" id="node4" href="$Alfabet_8hh.html" title="Especificacion del Alfabeto individual." coords="15,225,95,251"/>
+</map>

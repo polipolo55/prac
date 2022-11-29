@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Practica pro2: Encriptación de mensajes: Fichero Fuente Alfabet.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Practica pro2: Encriptación de mensajes
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Alfabet.hh</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Alfabet_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef ALFABET_HH</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define ALFABET_HH</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classAlfabet.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classAlfabet.html">Alfabet</a> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classAlfabet.html#a1ab3719725a14a1a32a9a23ec926cb64">   27</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classAlfabet.html#a1ab3719725a14a1a32a9a23ec926cb64">especial</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classAlfabet.html#a2505fe3309b18994101befb430c9a136">   30</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="classAlfabet.html#a2505fe3309b18994101befb430c9a136">nmsg</a> = 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classAlfabet.html#aa10c25f3110b76607388144444f345ab">   33</a></span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="classAlfabet.html#aa10c25f3110b76607388144444f345ab">alf</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><a class="code hl_function" href="classAlfabet.html#acc775d84db07dab4123a990cea8970ec">Alfabet</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><a class="code hl_function" href="classAlfabet.html#acc775d84db07dab4123a990cea8970ec">Alfabet</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; input_alf);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="classAlfabet.html#a0e85d6d4a76cd9badc00cba409af04e7">print_alfabet</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">bool</span> <a class="code hl_function" href="classAlfabet.html#a452dbe9bc41a51f98381298862f9f109">check_special</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> <a class="code hl_function" href="classAlfabet.html#a80e8b61b21d08819f4e23d56109cba0a">add_msgs_alf</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; n);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">int</span> <a class="code hl_function" href="classAlfabet.html#ac11c30a8ae8f19e6cda193e24734bb96">n_msg_alf</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keywordtype">bool</span> <a class="code hl_function" href="classAlfabet.html#a239501c829a2f7d22cc0e00836adb873">is_special</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keywordtype">int</span> <a class="code hl_function" href="classAlfabet.html#ad21d180e8389f6e50503725b85f441b3">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keywordtype">string</span> <a class="code hl_function" href="classAlfabet.html#a6f985c4886f3c1327a36188a45ce36ab">get_alf</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>};</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassAlfabet_html"><div class="ttname"><a href="classAlfabet.html">Alfabet</a></div><div class="ttdoc">Representa una unidad de alfabeto dentro del conjunto alfabetos.</div><div class="ttdef"><b>Definition:</b> Alfabet.hh:24</div></div>
+<div class="ttc" id="aclassAlfabet_html_a0e85d6d4a76cd9badc00cba409af04e7"><div class="ttname"><a href="classAlfabet.html#a0e85d6d4a76cd9badc00cba409af04e7">Alfabet::print_alfabet</a></div><div class="ttdeci">void print_alfabet()</div><div class="ttdoc">imprime los todos lo alfabetos con por orden de input</div><div class="ttdef"><b>Definition:</b> Alfabet.cc:17</div></div>
+<div class="ttc" id="aclassAlfabet_html_a1ab3719725a14a1a32a9a23ec926cb64"><div class="ttname"><a href="classAlfabet.html#a1ab3719725a14a1a32a9a23ec926cb64">Alfabet::especial</a></div><div class="ttdeci">bool especial</div><div class="ttdoc">Inidica si este alfabeto es escpecial o no, siendo especial un rango de caracteres ascii.</div><div class="ttdef"><b>Definition:</b> Alfabet.hh:27</div></div>
+<div class="ttc" id="aclassAlfabet_html_a239501c829a2f7d22cc0e00836adb873"><div class="ttname"><a href="classAlfabet.html#a239501c829a2f7d22cc0e00836adb873">Alfabet::is_special</a></div><div class="ttdeci">bool is_special() const</div><div class="ttdoc">retorna el booleano special para saber si lo es o no</div><div class="ttdef"><b>Definition:</b> Alfabet.cc:40</div></div>
+<div class="ttc" id="aclassAlfabet_html_a2505fe3309b18994101befb430c9a136"><div class="ttname"><a href="classAlfabet.html#a2505fe3309b18994101befb430c9a136">Alfabet::nmsg</a></div><div class="ttdeci">int nmsg</div><div class="ttdoc">indica el numero de mensajes en ese alfabeto</div><div class="ttdef"><b>Definition:</b> Alfabet.hh:30</div></div>
+<div class="ttc" id="aclassAlfabet_html_a452dbe9bc41a51f98381298862f9f109"><div class="ttname"><a href="classAlfabet.html#a452dbe9bc41a51f98381298862f9f109">Alfabet::check_special</a></div><div class="ttdeci">bool check_special(const string &amp;s)</div><div class="ttdoc">commprueba si un string es considera especial per tenir les lletres ordenades en lordre del ascii</div><div class="ttdef"><b>Definition:</b> Alfabet.cc:23</div></div>
+<div class="ttc" id="aclassAlfabet_html_a6f985c4886f3c1327a36188a45ce36ab"><div class="ttname"><a href="classAlfabet.html#a6f985c4886f3c1327a36188a45ce36ab">Alfabet::get_alf</a></div><div class="ttdeci">string get_alf() const</div><div class="ttdoc">Saca el string con los datos del alfabeto y los devuelve.</div><div class="ttdef"><b>Definition:</b> Alfabet.cc:48</div></div>
+<div class="ttc" id="aclassAlfabet_html_a80e8b61b21d08819f4e23d56109cba0a"><div class="ttname"><a href="classAlfabet.html#a80e8b61b21d08819f4e23d56109cba0a">Alfabet::add_msgs_alf</a></div><div class="ttdeci">void add_msgs_alf(const int &amp;n)</div><div class="ttdoc">añade el numero n de mensajes que corresponden al alfabeto</div><div class="ttdef"><b>Definition:</b> Alfabet.cc:32</div></div>
+<div class="ttc" id="aclassAlfabet_html_aa10c25f3110b76607388144444f345ab"><div class="ttname"><a href="classAlfabet.html#aa10c25f3110b76607388144444f345ab">Alfabet::alf</a></div><div class="ttdeci">string alf</div><div class="ttdoc">es los del datos del alfabeto de por si con todas sus letras incluso si hay de repetidas</div><div class="ttdef"><b>Definition:</b> Alfabet.hh:33</div></div>
+<div class="ttc" id="aclassAlfabet_html_ac11c30a8ae8f19e6cda193e24734bb96"><div class="ttname"><a href="classAlfabet.html#ac11c30a8ae8f19e6cda193e24734bb96">Alfabet::n_msg_alf</a></div><div class="ttdeci">int n_msg_alf()</div><div class="ttdoc">retorna el numero de mensajes (nmsg)</div><div class="ttdef"><b>Definition:</b> Alfabet.cc:36</div></div>
+<div class="ttc" id="aclassAlfabet_html_acc775d84db07dab4123a990cea8970ec"><div class="ttname"><a href="classAlfabet.html#acc775d84db07dab4123a990cea8970ec">Alfabet::Alfabet</a></div><div class="ttdeci">Alfabet()</div><div class="ttdoc">Constructora de Alfabet.</div><div class="ttdef"><b>Definition:</b> Alfabet.cc:10</div></div>
+<div class="ttc" id="aclassAlfabet_html_ad21d180e8389f6e50503725b85f441b3"><div class="ttname"><a href="classAlfabet.html#ad21d180e8389f6e50503725b85f441b3">Alfabet::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">se usa para saber el tamaño</div><div class="ttdef"><b>Definition:</b> Alfabet.cc:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

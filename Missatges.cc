@@ -1,5 +1,12 @@
+/**
+ * @file Missatges.cc
+ * @author Pol Casanovas Puig (pol.casanovas.puig@estudiantat.upc.edu)
+ * @brief Codigo de la clase Missatges, conjunto de mensajes
+ * 
+ * 
+ */
+
 #include "Missatges.hh"
-#include <iostream>
 
 using namespace std;
 
@@ -42,7 +49,7 @@ string Missatges::get_msg(const string& idm) {
 string Missatges::get_alf(const string& idm) {
   return missatges[idm].get_ida();
 }
-int Missatges::n_msg() {
+int Missatges::n_msg() const{
   return nmsg;
 }
 

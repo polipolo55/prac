@@ -1,5 +1,11 @@
+/**
+ * @file Missatge.cc
+ * @author Pol Casanovas Puig (pol.casanovas.puig@estudiantat.upc.edu)
+ * @brief Codigo de la clase missatges
+ * 
+ */
+
 #include "Missatge.hh"
-using namespace std;
 
 Missatge::Missatge() {}
 
@@ -16,29 +22,6 @@ string Missatge::get_msg() {
   return msg;
 }
 
-/*char Missatge::cod_char(Alfabet alf, const char& px, const char& py) {
-  if (alf.is_special()) {
-		return (px + py - 2*alf.find_pos_on_map(0))%alf.size() + alf.find_pos_on_map(0);
-  } else {
-    return alf.find_char_int_pos((alf.find_pos_on_map(px)+alf.find_pos_on_map(py))%alf.size());
-  }
-
-}
-*/
-
-/*char Missatge::decod_char(Alfabet alf, const char& c, const char& b) {
-	if (alf.is_special()) {
-		char a = c- b;
-		if (a < 0) a += alf.size();
-		return a + alf.find_pos_on_map(0);
-	}
-	else {
-		char a = alf.find_pos_on_map(c) - alf.find_pos_on_map(b);
-		if (a < 0) a += alf.size();
-		return alf.find_char_int_pos(a);
-	}
-}*/
-
 void Missatge::encrip_sust(const Alfabet& alfabet,const string& msg, const string& cl) {
   //cout << "comença la encrip" << endl;
   int n = msg.size();
@@ -46,6 +29,7 @@ void Missatge::encrip_sust(const Alfabet& alfabet,const string& msg, const strin
   Alfabet alf = alfabet;
   string alf_data = alf.get_alf();
   int alf_size = alf_data.size();
+  char fl = alf_data[0];
   string s;
   
   if (alf.is_special()) {
@@ -53,7 +37,7 @@ void Missatge::encrip_sust(const Alfabet& alfabet,const string& msg, const strin
     int px = 0;
     int py = 0;
     while (px < n) {
-      int pos = (msg[px] - alf_data[0]) + (cl[py] - alf_data[0]);
+      int pos = (msg[px] - fl) + (cl[py] - fl);
       if (pos >= alf_size) pos = pos - alf_size;
       s.push_back(alf_data[pos]);
       px++;
@@ -102,19 +86,21 @@ void Missatge::decrip_sust(const Alfabet& alfabet, const string& enc, const stri
 		}
 	}
 	else {
-		int j = 0;
+		int pos = 0;
 		for (int i = 0; i < n; i++) {
-			int p1 = 0;
-			int p2 = 0;
-			while (alf_data[p1] != enc[i] or alf_data[p2] != cl[j]) {
-				if (alf_data[p1] != enc[i]) p1++;
-				if (alf_data[p2] != cl[j]) p2++;
+
+			int px = 0;
+			int py = 0;
+			while (alf_data[px] != enc[i] or alf_data[py] != cl[pos]) {
+				if (alf_data[px] != enc[i]) px++;
+				if (alf_data[py] != cl[pos]) py++;
+
 			}
-			p1 = p1 - p2;
-			if (p1 < 0) p1 = p1 + alf_size;
-			r.push_back(alf_data[p1]);
-			j++;
-			if (j >= n_cl) j = 0;
+			px = px - py;
+			if (px < 0) px = px + alf_size;
+			r.push_back(alf_data[px]);
+			pos++;
+			if (pos >= n_cl) pos = 0;
 		}
 	}
 	cout << '"' << r << '"' << endl;
